@@ -1,7 +1,0 @@
-docker run -d \
---name=profilarr \
--p 6868:6868 \
--v /docker/appdata/config:/config:rw \
--e TZ=America/Los_Angeles \
---restart unless-stopped \
-santiagosayshey/profilarr:latest

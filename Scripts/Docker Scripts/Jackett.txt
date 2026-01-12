@@ -1,6 +1,0 @@
-docker run -d \
-  --name=jackett \
-  -p 9117:9117 \
-  -v /docker/config:/config:rw \
-  -v /docker/downloads:/downloads:rw \
-  linuxserver/jackett:latest
