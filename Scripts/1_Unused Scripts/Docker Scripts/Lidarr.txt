@@ -1,0 +1,7 @@
+docker run -d \
+  --name=lidarr \
+  -p 8686:8686 \
+  -v /docker/appdata/config:/config:rw \
+  -v music:/music:rw \
+  -v torrents:/torrents:rw \
+  linuxserver/lidarr:latest

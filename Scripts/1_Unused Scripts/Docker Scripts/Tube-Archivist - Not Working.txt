@@ -1,0 +1,85 @@
+cd /
+cd home
+mkdir compose
+cd compose
+touch docker-compose.yml
+nano docker-compose.yml
+
+
+
+
+Compose File (Copy Everything in between the =):
+
+
+=======================================================================
+
+
+name: tubearchivist
+
+services:
+  tubearchivist:
+    container_name: tubearchivist
+    restart: unless-stopped
+    image: bbilly1/tubearchivist
+    ports:
+      - 9000:8000
+    volumes:
+      - /share/youtube/archivist:/youtube
+      - /archivist/cache:/cache
+    environment:
+      - ES_URL=http://archivist-es:9200     # needs protocol e.g. http and port
+      - REDIS_HOST=archivist-redis          # don't add protocol
+      - HOST_UID=1000
+      - HOST_GID=1000
+      - TA_HOST=10.30.1.4         # set your host name
+      - TA_USERNAME=Robert           # your initial TA credentials
+      - TA_PASSWORD=Robert1190              # your initial TA credentials
+      - ELASTIC_PASSWORD=Robert1190         # set password for Elasticsearch
+      - TZ=America/Los Angeles                 # set your time zone
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 2m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    depends_on:
+      - archivist-es
+      - archivist-redis
+  archivist-redis:
+    image: redis/redis-stack-server
+    container_name: archivist-redis
+    restart: unless-stopped
+    expose:
+      - "6379"
+    volumes:
+      - /archivist/redis:/data
+    depends_on:
+      - archivist-es
+  archivist-es:
+    image: bbilly1/tubearchivist-es         # only for amd64, or use official es 8.14.3
+    container_name: archivist-es
+    restart: unless-stopped
+    environment:
+      - "ELASTIC_PASSWORD=Robert1190"       # matching Elasticsearch password
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - "xpack.security.enabled=true"
+      - "discovery.type=single-node"
+      - "path.repo=/usr/share/elasticsearch/data/snapshot"
+    volumes:
+      - /archivist/es:/usr/share/elasticsearch/data    # check for permission error when using bind mount, see readme
+    expose:
+      - "9200"
+
+
+=======================================================================
+
+
+cd /
+mkdir archivist
+cd archivist
+mkdir cache
+mkdir redis
+mkdir es
+cd /
+cd /home/compose
+docker compose up -d

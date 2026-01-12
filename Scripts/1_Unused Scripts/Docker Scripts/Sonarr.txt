@@ -1,0 +1,7 @@
+docker run -d \
+  --name=sonarr \
+  -p 8989:8989 \
+  -v /docker/appdata/sonarr:/config:rw \
+  -v video:/video:rw \
+  -v torrents:/torrents:rw \
+  linuxserver/sonarr

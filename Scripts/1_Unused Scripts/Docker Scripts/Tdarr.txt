@@ -1,0 +1,21 @@
+docker run -ti \
+    --name=tdarr\
+    -v /docker/tdarr/server:/app/server \
+    -v /docker/tdarr/configs:/app/configs \
+    -v /docker/tdarr/logs:/app/logs \
+    -v video:/media \
+    -v /transcode_cache:/temp \
+    -e "serverIP=0.0.0.0" \
+    -e "serverPort=8266" \
+    -e "webUIPort=8265" \
+    -e "internalNode=true" \
+    -e "nodeID=MyInternalNode" \
+    --network bridge \
+    -p 8265:8265 \
+    -p 8266:8266 \
+    -e "TZ=America/Los Angeles" \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e "NVIDIA_DRIVER_CAPABILITIES=all" \
+    -e "NVIDIA_VISIBLE_DEVICES=all" \
+    ghcr.io/haveagitgat/tdarr

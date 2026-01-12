@@ -1,0 +1,6 @@
+docker run -d --name huntarr \
+  --restart always \
+  -p 9705:9705 \
+  -v /docker/appdata/config/huntarr:/config:rw \
+  -e TZ=America/Los_Angeles \
+  huntarr/huntarr:latest

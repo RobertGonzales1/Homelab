@@ -1,0 +1,7 @@
+docker run -d \
+  --name=jellyfin \
+  -p 8096:8096 \
+  -v /docker/appdata/jellyfin:/config:rw \
+  -v video:/data/tvshows:rw \
+  -v video:/data/movies:rw \
+  linuxserver/jellyfin:latest

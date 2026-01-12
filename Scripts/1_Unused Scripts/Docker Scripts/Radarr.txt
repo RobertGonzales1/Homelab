@@ -1,0 +1,7 @@
+docker run -d \
+  --name=radarr \
+  -p 7878:7878 \
+  -v /docker/appdata/radarr:/config:rw \
+  -v video:/video:rw \
+  -v torrents:/torrents:rw \
+  linuxserver/radarr
