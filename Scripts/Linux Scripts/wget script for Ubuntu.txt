@@ -1,6 +1,0 @@
-#WGet Command
-sudo wget -m -np -c -U FAQ -R "index.html*" "WEBSITE HERE" -N -P /mnt/torrents
-
-
-#Mount Drive in Linux
-sudo mount -t cifs -o username=**********,password=********** //10.120.1.4/torrents /mnt/torrents
