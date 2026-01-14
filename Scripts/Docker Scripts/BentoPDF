@@ -1,0 +1,5 @@
+docker run \
+--name BentoPDF \
+--restart unless-stopped \
+-p 3000:8080 \
+bentopdf/bentopdf:latest
