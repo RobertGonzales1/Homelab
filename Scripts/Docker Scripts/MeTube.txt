@@ -1,5 +1,6 @@
 docker run \
---name MeTube
+--name MeTube \
 --restart unless-stopped \
 -p 8081:8081 \
 ghcr.io/alexta69/metube
+
