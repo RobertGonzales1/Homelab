@@ -1,7 +1,7 @@
 docker run \
 --name Notifiarr \
 -h notifiarr \
---restart unless-stopped \
+--restart=always \
 --privileged \
 -p 5454:5454 \
 -v /path/to/notifiarrconfig/:/config \
