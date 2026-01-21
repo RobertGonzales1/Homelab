@@ -4,7 +4,7 @@ docker run \
 --restart=always \
 --privileged \
 -p 5454:5454 \
--v /path/to/notifiarrconfig/:/config \
+-v /notifiarrconfig/:/config \
 -v /var/run/utmp:/var/run/utmp \
 -v /etc/machine-id:/etc/machine-id \
 golift/notifiarr
