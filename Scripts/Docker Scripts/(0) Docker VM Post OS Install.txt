@@ -1,12 +1,12 @@
-Clone Template
+#Clone Template
 
-Configure Network
+#Configure Network
 
-Install cifs-utils (For SMB Shares)
+#Install cifs-utils (For SMB Shares)
 sudo apt update
 sudo apt install cifs-utils
 
-Mount SMB Share (For SMB Shares)
+#Mount SMB Share (For SMB Shares)
 sudo mkdir /mnt/smbshare
 sudo mount -t cifs //10.120.1.2/xxxxxx /mnt/smbshare -o username=xxxxxx,vers=3.0
 
@@ -37,3 +37,4 @@ sudo docker run \
     --restart unless-stopped \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     nickfedor/watchtower
+
