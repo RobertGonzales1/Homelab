@@ -4,5 +4,4 @@ docker run \
 -p 6868:6868 \
 -v /docker/appdata/config:/config:rw \
 -e TZ=America/Los_Angeles \
-
 santiagosayshey/profilarr:latest
