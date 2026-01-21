@@ -34,7 +34,8 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -
 #Docker Watchtower:
 sudo docker run \
     --name watchtower \
-    --restart unless-stopped \
+    --restart=always \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     nickfedor/watchtower
+
 
