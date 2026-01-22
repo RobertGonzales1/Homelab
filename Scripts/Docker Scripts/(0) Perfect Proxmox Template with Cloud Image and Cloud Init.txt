@@ -12,7 +12,7 @@ qm create 900 --memory 1024 --core 4 --name ubuntu-server-cloudinit --net0 virti
 
 #Import the downloaded Ubuntu disk to local storage (Change local to the storage of your choice)
 
-qm disk import 900 noble-server-cloudimg-amd64.img local
+qm disk import 900 noble-server-cloudimg-amd64.img local-zfs
 
 #Attach the new disk to the vm as a scsi drive on the scsi controller (Change local to the storage of your choice)
 
@@ -44,3 +44,4 @@ sudo rm -f /var/lib/dbus/machine-id
 #Then shut it down and do not boot it up.A new id will be generated the next time it boots.If it does not you can run:
 
 sudo systemd-machine-id-setup
+
