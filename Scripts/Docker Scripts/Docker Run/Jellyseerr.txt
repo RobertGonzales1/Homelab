@@ -1,0 +1,9 @@
+docker run \
+--name jellyseerr \
+--restart=always \
+-e LOG_LEVEL=debug \
+-e TZ=America/Los_Angeles \
+-e PORT=5055 `#optional` \
+-p 5055:5055 \
+-v /path/to/appdata/config:/app/config \
+fallenbagel/jellyseerr
