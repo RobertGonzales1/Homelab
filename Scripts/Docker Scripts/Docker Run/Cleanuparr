@@ -1,5 +1,5 @@
 docker run \
-  -d --name cleanuparr \
+  --name cleanuparr \
   --restart always \
   -p 11011:11011 \
   -v /path/to/config:/config \
