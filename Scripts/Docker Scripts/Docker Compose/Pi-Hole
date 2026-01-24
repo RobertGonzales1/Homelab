@@ -14,12 +14,12 @@ services:
       # Uncomment the line below if you are using Pi-hole as your DHCP server
       #- "67:67/udp"
       # Uncomment the line below if you are using Pi-hole as your NTP server
-      #- "123:123/udp"
+      - "123:123/udp"
     environment:
       # Set the appropriate timezone for your location (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), e.g:
-      TZ: 'Europe/London'
+      TZ: 'America/Los_Angeles'
       # Set a password to access the web interface. Not setting one will result in a random password being assigned
-      FTLCONF_webserver_api_password: 'correct horse battery staple'
+      FTLCONF_webserver_api_password: 'ChangeMe'
       # If using Docker's default `bridge` network setting the dns listening mode should be set to 'ALL'
       FTLCONF_dns_listeningMode: 'ALL'
     # Volumes store your data between container upgrades
@@ -36,4 +36,4 @@ services:
       - SYS_TIME
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
-    restart: unless-stopped
+    restart: always
