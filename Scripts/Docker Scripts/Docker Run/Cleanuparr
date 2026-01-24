@@ -1,10 +1,10 @@
 docker run \
-  --name cleanuparr \
-  --restart always \
-  -p 11011:11011 \
-  -v /path/to/config:/config \
-  -e PORT=11011 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=America/Los_Angeles \
-  ghcr.io/cleanuparr/cleanuparr:latest
+--name cleanuparr \
+--restart always \
+-p 11011:11011 \
+-v /path/to/config:/config \
+-e PORT=11011 \
+-e PUID=1000 \
+-e PGID=1000 \
+-e TZ=America/Los_Angeles \
+ghcr.io/cleanuparr/cleanuparr:latest
