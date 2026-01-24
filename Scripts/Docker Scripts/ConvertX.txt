@@ -1,6 +1,0 @@
-docker run \
---name=convertx \
---restart=always \
--p 3000:3000 \
--v ./data:/app/data \
-ghcr.io/c4illin/convert
