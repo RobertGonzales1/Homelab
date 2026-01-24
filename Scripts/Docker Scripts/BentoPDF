@@ -1,5 +1,0 @@
-docker run \
---name BentoPDF \
---restart=always \
--p 3000:8080 \
-bentopdf/bentopdf:latest
