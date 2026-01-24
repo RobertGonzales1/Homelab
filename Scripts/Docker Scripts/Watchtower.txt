@@ -1,5 +1,0 @@
-docker run \
---name watchtower \
---restart=always \
---volume /var/run/docker.sock:/var/run/docker.sock \
-nickfedor/watchtower
