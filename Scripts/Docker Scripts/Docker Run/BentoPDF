@@ -2,4 +2,4 @@ docker run \
 --name BentoPDF \
 --restart=always \
 -p 3000:8080 \
-bentopdf/bentopdf:latest
+ghcr.io/alam00000/bentopdf:latest
