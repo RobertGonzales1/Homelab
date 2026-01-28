@@ -1,1 +1,2 @@
-docker run --name=convertx --restart=always -p 3000:3000 ghcr.io/c4illin/convertx
+docker run --name=convertx --restart=always -p 3000:3000 -e ACCOUNT_REGISTRATION=false -e ALLOW_UNAUTHENTICATED -e AUTO_DELETE_EVERY_N_HOURS=24 -e HTTP_ALLOWED=true ghcr.io/c4illin/convertx
+
