@@ -1,4 +1,4 @@
-docker run \
+sudo docker run -d \
 --name Notifiarr \
 -h notifiarr \
 --restart=always \

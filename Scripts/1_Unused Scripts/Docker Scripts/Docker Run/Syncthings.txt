@@ -1,4 +1,4 @@
-docker run -d \
+sudo docker run -d \
   --name=syncthing \
   -p 8384:8384 \
   -p 22000:22000/tcp \
@@ -7,3 +7,4 @@ docker run -d \
   -v /docker/appdata/syncthing:/config:rw \
   -v torrents:/data:rw \
   linuxserver/syncthing
+

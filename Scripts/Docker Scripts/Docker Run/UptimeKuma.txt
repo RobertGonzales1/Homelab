@@ -1,6 +1,7 @@
-docker run \
+sudo docker run -d \
 --name UptimeKuma \
 --restart=always \
 -p 3001:3001 \
 -v uptime-kuma:/app/data \
 louislam/uptime-kuma:2
+

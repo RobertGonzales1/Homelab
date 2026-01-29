@@ -1,4 +1,4 @@
-docker run \
+sudo docker run -d \
 --name portainer \
 --restart=always \
 -p 8000:8000 \
@@ -6,3 +6,4 @@ docker run \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v portainer_data:/data \
 portainer/portainer-ce:lts
+

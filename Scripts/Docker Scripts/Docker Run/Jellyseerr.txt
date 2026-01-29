@@ -1,4 +1,4 @@
-docker run \
+sudo docker run -d \
 --name jellyseerr \
 --restart=always \
 -e LOG_LEVEL=debug \
@@ -7,3 +7,4 @@ docker run \
 -p 5055:5055 \
 -v /path/to/appdata/config:/app/config \
 fallenbagel/jellyseerr
+

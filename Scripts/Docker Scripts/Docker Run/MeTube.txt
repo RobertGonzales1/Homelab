@@ -1,5 +1,6 @@
-docker run \
+sudo docker run -d \
 --name MeTube \
 --restart=always \
 -p 8081:8081 \
 ghcr.io/alexta69/metube
+

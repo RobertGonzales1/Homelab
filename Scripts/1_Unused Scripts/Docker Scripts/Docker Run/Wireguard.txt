@@ -1,4 +1,4 @@
-docker run -d \
+sudo docker run -d \
   --name=wg-easy \
   -e WG_HOST=********** \
   -e PASSWORD=********** \
@@ -11,3 +11,4 @@ docker run -d \
   --sysctl="net.ipv4.ip_forward=1" \
   --restart unless-stopped \
   weejewel/wg-easy
+
