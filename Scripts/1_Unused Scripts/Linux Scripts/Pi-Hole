@@ -1,4 +1,0 @@
-curl -sSL https://install.pi-hole.net | bash
-
-#Set New Password
-pihole -a -p
