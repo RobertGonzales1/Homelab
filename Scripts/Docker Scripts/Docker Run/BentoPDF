@@ -1,4 +1,4 @@
-docker run \
+sudo docker run -d \
 --name BentoPDF \
 --restart=always \
 -p 3000:8080 \
