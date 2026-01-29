@@ -1,4 +1,4 @@
-docker run -ti \
+sudo docker run -d -ti \
     --name=tdarr\
     -v /docker/tdarr/server:/app/server \
     -v /docker/tdarr/configs:/app/configs \
@@ -19,3 +19,4 @@ docker run -ti \
     -e "NVIDIA_DRIVER_CAPABILITIES=all" \
     -e "NVIDIA_VISIBLE_DEVICES=all" \
     ghcr.io/haveagitgat/tdarr
+
