@@ -1,4 +1,4 @@
-docker run -d \
+sudo docker run -d \
   --name seerr \
   --init \
   -e LOG_LEVEL=debug \
