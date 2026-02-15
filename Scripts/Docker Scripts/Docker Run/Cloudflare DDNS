@@ -1,6 +1,5 @@
-sudo docker run \
+sudo docker run -d \
   -e API_KEY=xxxxxxx \
   -e ZONE=example.com \
-  -e SUBDOMAIN=subdomain \
   --restart=always \
   oznu/cloudflare-ddns
