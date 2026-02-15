@@ -1,3 +1,5 @@
+#Merged into Seerr, Use Seerr
+
 sudo docker run -d \
 --name jellyseerr \
 --restart=always \
@@ -7,4 +9,5 @@ sudo docker run -d \
 -p 5055:5055 \
 -v /path/to/appdata/config:/app/config \
 fallenbagel/jellyseerr
+
 
