@@ -12,3 +12,4 @@ services:
       - /autobrr/config:/config
     ports:
       - 7474:7474
+#You May Need to Add the container created to the "bridge" network.
