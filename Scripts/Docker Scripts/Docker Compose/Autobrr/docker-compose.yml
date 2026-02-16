@@ -5,6 +5,7 @@ services:
     container_name: autobrr
     image: ghcr.io/autobrr/autobrr:latest
     restart: always
+    network_mode: host
     environment:
       - TZ=America/Los_Angeles
     user: 1000:1000
