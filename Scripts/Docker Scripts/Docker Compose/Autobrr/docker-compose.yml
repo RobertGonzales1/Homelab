@@ -12,4 +12,3 @@ services:
       - /autobrr/config:/config
     ports:
       - 7474:7474
-#If you use Portainer, Turn off access control.
