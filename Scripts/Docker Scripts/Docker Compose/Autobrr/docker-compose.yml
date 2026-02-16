@@ -8,7 +8,6 @@ services:
     network_mode: host
     environment:
       - TZ=America/Los_Angeles
-    user: 1000:1000
     volumes:
       - /autobrr/config:/config
     ports:
