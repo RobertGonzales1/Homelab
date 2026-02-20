@@ -1,9 +1,8 @@
 # My Homelab
-
 It Uses Proxmox as the Virtualization Platform.
 Network Hardware is Unifi
 Security is a Combination of Cloudflare + Crowdsec on the NGINX + Unifi IPS (Looking to use Fail to Ban in a furutre Rebuild)
-Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via S3 on Backblaze
+Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via Backblaze B2/S3 Buckets
 Backups Use Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Windows Devices without VMs (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
@@ -20,16 +19,17 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 3. Switched Subnets From 192.168.x.x To 10.x.x.x (12/2022)
 4. Started Using Cloudflare (03/2023)
 5. Get Crownsec Installed on Unifi Hardware (04/2023)
-6. Rebuilt Most Windows 10 VMs to Windows Server 2019  (05/2023)
-7. Moved Domain form Google Domains to Name Cheap (11/2023)
-8. Switched to New Hardware (Mini PCs From 1L Dell PCs) (08/2024)
-9. Switched all HyperV Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
-10. Started Using LXC Containers (04/2025)
-11. Started Using Github To Document Homelab (08/2025)
-12. Started Rebuilding VMs Using Windows Server 2019 into VMs Using Windows Server 2022 (08/2025) 
-13. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
-14. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
-15. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
+6. Started Using Backblaze B2/S3 for NAS Data Backups (04/2023)
+7. Rebuilt Most Windows 10 VMs to Windows Server 2019  (05/2023)
+8. Moved Domain form Google Domains to Name Cheap (11/2023)
+9. Switched to New Hardware (Mini PCs From 1L Dell PCs) (08/2024)
+10. Switched all HyperV Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
+11. Started Using LXC Containers (04/2025)
+12. Started Using Github To Document Homelab (08/2025)
+13. Started Rebuilding VMs Using Windows Server 2019 into VMs Using Windows Server 2022 (08/2025) 
+14. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
+15. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
+16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
