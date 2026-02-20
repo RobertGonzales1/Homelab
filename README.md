@@ -1,4 +1,6 @@
 # My Homelab
+Note: None of the Code in This Repository is AI Generated (As Far As I Know). If I find out it is, I will Label it as AI. 
+
 It Uses Proxmox as the Virtualization Platform.
 
 Network Hardware is Unifi
