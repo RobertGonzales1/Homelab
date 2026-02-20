@@ -22,8 +22,10 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 9. Switched all HyperV Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
 10. Started Using LXC Containers (04/2025)
 11. Started Using Github To Document Homelab (08/2025)
-12. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
-13. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
+12. Started Rebuilding VMs Using Windows Server 2019 into VMs Using Windows Server 2022 (08/2025) 
+13. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
+14. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
+15. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
