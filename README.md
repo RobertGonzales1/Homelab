@@ -1,6 +1,10 @@
 # My Homelab
 
 It Uses Proxmox as the Virtualization Platform.
+Network Hardware is Unifi
+Security is a Combination of Cloudflare + Crowdsec on the NGINX + Unifi IPS (Looking to use Fail to Ban in a furutre Rebuild)
+Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via S3 on Backblaze
+Backups Use Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Windows Devices without VMs (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
 Cloud-Int with Ubuntu Server with Docker
