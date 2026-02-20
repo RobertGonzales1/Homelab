@@ -9,7 +9,7 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 
 Projects I use on are Below, Check them out and Support the Projects:
 
-[Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) Github is not letting me make this link open in a new window.
+[Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (Github is not letting me make this link open in a new window.)
 
 My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
