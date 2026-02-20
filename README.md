@@ -21,7 +21,7 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 8. Started Using LXC Containers (04/2025)
 9. Started Using Github To Document Homelab (08/2025)
 10. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
-11. 
+11. Started Using Custom Made Cloud-init Image (01/2026)
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
