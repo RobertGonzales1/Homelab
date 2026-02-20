@@ -19,6 +19,7 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 6. Switched to New Hardware (Mini PCs From 1L Dell PCs) (08/2024)
 7. Switched all HyperV Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
 8. Started Using LXC Containers (04/2025)
+9. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so its more orgainized (09/2025)
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
