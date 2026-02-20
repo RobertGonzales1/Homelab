@@ -1,13 +1,19 @@
 # My Homelab
 It Uses Proxmox as the Virtualization Platform.
+
 Network Hardware is Unifi
+
 Security is a Combination of Cloudflare + Crowdsec on the NGINX + Unifi IPS (Looking to use Fail to Ban in a furutre Rebuild)
+
 Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via Backblaze B2/S3 Buckets
+
 Backups Use Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Windows Devices without VMs (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
 Cloud-Int with Ubuntu Server with Docker
+
 Windows Server 2022
+
 LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I dident know the LXC containers all share a kernal with proxmox.)
 
 # Projects I use on are Below, Check them out and Support the Projects:
