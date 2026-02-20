@@ -16,8 +16,8 @@ My TO-DO List:
 2. Set Up some Automation like updates (Still nedd to figure out if IM going ot ivest my timme in Ansible or n8n).
 3. Figure out a better storage solution thjen just 2 NASs (Maybe Tiered Storage Array).
 4. An Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
-5. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kuberneties?)
-6. 
+5. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kuberneties?).
+6. Get Home Assistnt Setup (Will Need Seperate Hardware Sitting on my IOT Network).
 
 <img width="2191" height="4657" alt="Network Diagram 2-10-65" src="https://github.com/user-attachments/assets/72a033db-2119-47f1-9c32-fabf8ece3094" />
 
