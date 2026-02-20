@@ -7,7 +7,8 @@ Cloud-Int with Ubuntu Server with Docker
 Windows Server 2022
 LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I dident know the LXC containers all share a kernal with proxmox.)
 
-Projects I use on here Include:
+Projects I use on here Are Starred on My Profile, Check them out and Support the Projects:
+https://github.com/RobertGonzales1?tab=stars
 
 
 My TO-DO List:
@@ -15,7 +16,8 @@ My TO-DO List:
 2. Set Up some Automation like updates (Still nedd to figure out if IM going ot ivest my timme in Ansible or n8n).
 3. Figure out a better storage solution thjen just 2 NASs (Maybe Tiered Storage Array).
 4. An Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
-5. 
+5. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kuberneties?)
+6. 
 
 <img width="2191" height="4657" alt="Network Diagram 2-10-65" src="https://github.com/user-attachments/assets/72a033db-2119-47f1-9c32-fabf8ece3094" />
 
