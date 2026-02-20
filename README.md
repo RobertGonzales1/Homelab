@@ -11,8 +11,14 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 [Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (Github is not letting me make this link open in a new window.)
 
 # Milestones/Accomplishments:
-1. Get Crownsec Installed on Unifi Hardware (04/2023)
-2. 
+1. Started Documenting Homelab with Draw.IO (08/2022)
+2. Created VLANs (12/2022)
+3. Switched Subnets From 192.168.x.x To 10.x.x.x (12/2022)
+4. Get Crownsec Installed on Unifi Hardware (04/2023)
+5. Rebuilt Most Windows 10 VMs to Windows Server 2019  (05/2023)
+6. Switched to New Hardware (Mini PCs From 1L Dell PCs) (08/2024)
+7. Switched all HyperV Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
+8. Started Using LXC Containers (04/2025)
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
