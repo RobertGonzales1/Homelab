@@ -41,11 +41,13 @@ LXC Containers (Im trying to rebuild these one at a time into Cloud-Int with Ubu
 
 # My TO-DO List:
 1. Figure Out How to Confirgure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
-2. Set Up some Automation like updates (Still need to figure out if Im going ot ivest my time in Ansible, n8n, or another prduct).
-3. Figure out a better storage solution thjen just 2 NASs (Maybe Tiered Storage Array?).
-4. An Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
-5. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kuberneties?).
-6. Get Home Assistnt Setup (Will Need Seperate Hardware Sitting on my IOT Network).
+2. Have a Wildcard Cert thru NGINX VS a Cert For Each Sub Domain.
+3. Set Up some Automation like updates (Still need to figure out if Im going ot ivest my time in Ansible, n8n, or another prduct).
+4. Figure out a better storage solution thjen just 2 NASs (Maybe Tiered Storage Array?).
+5. An Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
+6. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kuberneties?).
+7. Get Home Assistnt Setup (Will Need Seperate Hardware Sitting on my IOT Network).
+8. Transfer Main Domain To New Provider.
 
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
