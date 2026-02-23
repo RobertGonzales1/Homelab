@@ -1,4 +1,4 @@
-#NOTICE: This Project was found to be vibe coded and has many security issues, If you use this DONT EXPOSE IT TO THE INTERNET.
+#NOTICE: This Project was found to be AI vibe coded and has many security issues, If you use this DONT EXPOSE IT TO THE INTERNET.
 sudo docker run -d \
 --name huntarr \
 --restart=always \
@@ -6,5 +6,6 @@ sudo docker run -d \
 -v /docker/appdata/config/huntarr:/config:rw \
 -e TZ=America/Los_Angeles \
 huntarr/huntarr:latest
+
 
 
