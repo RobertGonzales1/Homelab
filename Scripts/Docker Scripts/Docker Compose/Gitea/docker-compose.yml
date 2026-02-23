@@ -4,6 +4,7 @@ services:
   server:
     image: docker.gitea.com/gitea:latest-rootless
     restart: always
+    networkmode: host
     volumes:
       - ./data:/var/lib/gitea
       - ./config:/etc/gitea
