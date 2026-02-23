@@ -48,7 +48,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 6. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kubernetes?).
 7. Get Home Assistant Setup (Will Need Separate Hardware Sitting on my IOT Network).
 8. Transfer Main Domain to a New Provider.
-9. ~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~ Turns out thats not with Gitea is intended to be used for (02/2026)
+9. ~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~ Turns out thats not what Gitea is intended to be used for (02/2026)
 10. Get a better Hardware Solution so Each Mini PC/VM Host has a Redundent Failover or Has High Availability. 
 
 # 💻 Tech Stack:
