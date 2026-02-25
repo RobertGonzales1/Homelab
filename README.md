@@ -50,6 +50,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 8. Transfer Main Domain to a New Provider.
 9. ~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~ Turns out thats not what Gitea is intended to be used for (02/2026)
 10. Get a better Hardware Solution so Each Mini PC/VM Host has a Redundent Failover or Has High Availability. (Ill go back to Proxmox HA once I get the Hardware)
+11. Move Localy Hosted IIS Static Websites into Azure.
 
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
