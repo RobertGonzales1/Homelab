@@ -38,6 +38,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 14. Reconfigured Main Switch, Also Moved the VLANs on the Ports around so it’s more organized (09/2025)
 15. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
+17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
 
 # My TO-DO List:
 1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
