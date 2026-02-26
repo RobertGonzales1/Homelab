@@ -1,6 +1,6 @@
 # My TO-DO List:
 1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
-2. Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.
+2. ~Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.~ Now Emabled (02/2026)
 3. Set Up some Automation like updates (Still need to figure out if I’m going to invest my time in Ansible, n8n, or another product).
 4. Figure out a better storage solution than just 2 NASs (Maybe Tiered Storage Array?).
 5. A Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
