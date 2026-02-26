@@ -39,7 +39,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 15. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
-18. Now Using Wildcard Certificate on NGINX for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
+18. Now Using Wildcard Certificate on NGINX (Using DNS Challenge) for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
 
 # My TO-DO List:
 1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
@@ -52,7 +52,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 8. ~~Transfer Main Domain to a New Provider.~~ Done (02/2026)
 9. ~~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~~ Turns out thats not what Gitea is intended to be used for (02/2026)
 10. Get a better Hardware Solution so Each Mini PC/VM Host has a Redundent Failover or Has High Availability. (Ill go back to Proxmox HA once I get the Hardware)
-11. ~~Move Localy Hosted IIS Static Websites into Azure.~~ Moved all but homelab domain into azure. Im going to keep the Homelab domain on a local IIS Server so I have both On Prem and Cloud Solutions to Test and Play With. (02/2026)
+11. ~~Move Localy Hosted IIS Static Websites into Azure.~~ Moved all but Homelab domain into azure. Im going to keep the Homelab domain on a local IIS Server so I have both On Prem and Cloud Solutions to Test and Play With. (02/2026)
 
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
