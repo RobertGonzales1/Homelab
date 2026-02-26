@@ -40,19 +40,6 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
 
-# My TO-DO List:
-1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
-2. Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.
-3. Set Up some Automation like updates (Still need to figure out if I’m going to invest my time in Ansible, n8n, or another product).
-4. Figure out a better storage solution than just 2 NASs (Maybe Tiered Storage Array?).
-5. A Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
-6. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kubernetes?).
-7. Get Home Assistant Setup (Will Need Separate Hardware Sitting on my IOT Network).
-8. Transfer Main Domain to a New Provider.
-9. ~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~ Turns out thats not what Gitea is intended to be used for (02/2026)
-10. Get a better Hardware Solution so Each Mini PC/VM Host has a Redundent Failover or Has High Availability. (Ill go back to Proxmox HA once I get the Hardware)
-11. ~Move Localy Hosted IIS Static Websites into Azure.~ Moved all but 2 into azure. Ill wait a few months and see what the real cost of azure is before moving the last 2. (02/2026)
-
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
 ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) 
