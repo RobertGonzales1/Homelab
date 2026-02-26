@@ -39,6 +39,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 15. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
+18. Now Using Wildcard Certificate on NGINX for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
 
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
