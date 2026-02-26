@@ -39,12 +39,12 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 15. Created First SSH Key for Cloud-init Image for New VMs (01/2026)
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
-18. Now Using Wildcard Certificate on NGINX (Using DNS Challenge) for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
+18. Now Using Wildcard Certificate on Nginx (Using DNS Challenge) for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
 
 # My TO-DO List:
-1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
-2. ~~Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.~~ Now Emabled (02/2026)
-3. Set Up some Automation like updates (Still need to figure out if I’m going to invest my time in Ansible, n8n, or another product).
+1. ~~Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxy Turned on in the DNS for Cloudflare.~~ Complete (02/2026)
+2. ~~Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.~~ Now Enabled (02/2026)
+3. Set Up some Automation like Auto Update (Still need to figure out if I’m going to invest my time in Ansible, n8n, or another product).
 4. Figure out a better storage solution than just 2 NASs (Maybe Tiered Storage Array?).
 5. A Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
 6. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kubernetes?).
@@ -62,7 +62,6 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 ![Jellyfin](https://img.shields.io/badge/jellyfin-%23000B25.svg?style=for-the-badge&logo=Jellyfin&logoColor=00A4DC) 
 ![Pi-Hole](https://img.shields.io/badge/pihole-%2396060C.svg?style=for-the-badge&logo=pi-hole&logoColor=white) 
 ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) 
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 <img width="2191" height="4657" alt="Network Diagram 2-10-65" src="https://github.com/RobertGonzales1/Homelab/blob/main/Network%20Diagram%202-10-65.png?raw=true" />
