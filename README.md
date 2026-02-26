@@ -41,6 +41,19 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
 18. Now Using Wildcard Certificate on NGINX for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
 
+# My TO-DO List:
+1. Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxying Turned on in the DNS for Cloudflare.
+2. ~~Have a Wildcard Cert through NGINX VS a Cert for Each Sub Domain.~~ Now Emabled (02/2026)
+3. Set Up some Automation like updates (Still need to figure out if I’m going to invest my time in Ansible, n8n, or another product).
+4. Figure out a better storage solution than just 2 NASs (Maybe Tiered Storage Array?).
+5. A Secondary Site Backup strategy (I have Backblaze for offsite but that just has critical data, Need an Offsite solution for all Data).
+6. Figure out how to Sync my Pi-Hole Instances or do some sort of load balancing (Kubernetes?).
+7. Get Home Assistant Setup (Will Need Separate Hardware Sitting on my IOT Network).
+8. ~~Transfer Main Domain to a New Provider.~~ Done (02/2026)
+9. ~~Figure out a way to get Gitea to do a two way Sync instead of the current one-way sync setup (GitHub->Gitea).~~ Turns out thats not what Gitea is intended to be used for (02/2026)
+10. Get a better Hardware Solution so Each Mini PC/VM Host has a Redundent Failover or Has High Availability. (Ill go back to Proxmox HA once I get the Hardware)
+11. ~~Move Localy Hosted IIS Static Websites into Azure.~~ Moved all but homelab domain into azure. Im going to keep the Homelab domain on a local IIS Server so I have both On Prem and Cloud Solutions to Test and Play With. (02/2026)
+
 # 💻 Tech Stack:
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
 ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) 
