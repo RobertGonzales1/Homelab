@@ -10,6 +10,9 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /autobrr/config:/config
-      - /torrents:/torrents
+      - torrents:/torrents
     ports:
       - 7474:7474
+volumes:
+  torrents:
+    external: true
