@@ -18,7 +18,7 @@ Windows Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I A
 
 LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I didn’t know the LXC containers all share the same Kernel.)
 
-# Projects I use on are Below, check them out and Support the Projects:
+# The Github Projects I use are Below, check them out and Support the Projects:
 [Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (GitHub is not letting me make this link open in a new window.)
 
 # Milestones/Accomplishments:
