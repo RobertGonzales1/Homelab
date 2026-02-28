@@ -1,14 +1,14 @@
   tdarr-node:
     container_name: tdarr-node
     image: ghcr.io/haveagitgat/tdarr_node:latest
-    restart: unless-stopped
+    restart: always
     network_mode: service:tdarr
     environment:
       - TZ=Europe/London
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK_SET=002
-      - nodeName=MyExternalNode
+      - nodeName=Node01
       - serverIP=0.0.0.0
       - serverPort=8266
       - inContainer=true
