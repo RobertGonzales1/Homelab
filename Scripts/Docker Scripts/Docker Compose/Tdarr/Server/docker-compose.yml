@@ -41,6 +41,11 @@ services:
           devices:
           - driver: nvidia
             count: all
+    volumes:
+      media:
+        external: true
+
+
             capabilities: [gpu]
     
 
