@@ -16,7 +16,7 @@ Cloud-Int with Ubuntu Server with Docker
 
 Windows Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
 
-LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I didn’t know the LXC containers all share the same Kernel.)
+LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I didn’t know the LXC containers all share the same Kernel.) (Completed 02/2026)
 
 # The Github Projects I use are Below, check them out and Support the Projects:
 [Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (GitHub is not letting me make this link open in a new window.)
@@ -29,7 +29,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 5. Get Crowdsec Installed on Unifi Hardware (04/2023)
 6. Started Using Backblaze B2/S3 for NAS Data Backups (04/2023)
 7. Rebuilt Most Windows 10 VMs to Windows Server 2019 (05/2023)
-8. Moved Domain form Google Domains to Name Cheap (11/2023)
+8. Moved Domain form Google Domains to NameCheap (11/2023)
 9. Switched to New Hardware (Mini PCs From 1L Dell PCs) (08/2024)
 10. Switched all Hyper-V Hosts to Proxmox, Also Rebuilt all VMs (08/2024)
 11. Started Using LXC Containers (04/2025)
@@ -40,6 +40,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 16. Started Using Custom Made Cloud-init Image and Started to Rebuild LXC Containers into the Cloud-init Ubuntu Server VMs (01/2026)
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
 18. Now Using Wildcard Certificate on Nginx (Using DNS Challenge) for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
+19. Completed Rebuilding all LXC Containers to Linux Ubuntu Server with Docker (02/2026)
 
 # My TO-DO List:
 1. ~~Figure Out How to Configure Cloudflare/Nginx so my Nginx can Renew SSL Certs when I have the Proxy Turned on in the DNS for Cloudflare.~~ Complete (02/2026)
