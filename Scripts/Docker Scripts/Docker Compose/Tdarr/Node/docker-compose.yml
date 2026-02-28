@@ -1,3 +1,5 @@
+version: "3.4"
+services:
   tdarr-node:
     container_name: tdarr-node
     image: ghcr.io/haveagitgat/tdarr_node:latest
