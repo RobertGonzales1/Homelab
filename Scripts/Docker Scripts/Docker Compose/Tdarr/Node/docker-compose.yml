@@ -5,6 +5,8 @@ services:
     image: ghcr.io/haveagitgat/tdarr_node:latest
     restart: always
     network_mode: bridge
+    ports:
+      - 8265:8265 # webUI port
     environment:
       - TZ=America/Los_Angeles
       - PUID=${PUID}
