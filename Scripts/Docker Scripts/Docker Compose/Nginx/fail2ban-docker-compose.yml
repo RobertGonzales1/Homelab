@@ -3,11 +3,11 @@ services:
     image: maxlonplay/nginx-shield:latest
     container_name: nginx-shield
     restart: always
-    environment:
-      # The localization module requires at least 2 GB of RAM to disable IP geolocation lookup (set to "true", "1", or "yes" to disable)
-      - DISABLE_GEOLOCATE=false
-      # GeoIP language code for country names ('it' for Italian, 'en' for English, 'fr' for French, 'es' for Spanish, 'de' for German)
-      - GEOIP_LANG=it
+    network_mode: bridge
+    ports:
+      # Web interface / API port
+      - "7000:8000"
+     # - "8881:8881" # Uncomment if you want to expose the API port for the geolocate service (if enabled)
     volumes:
       # Nginx access and error logs directory (required for log monitoring and analysis)
       - /dockers/npm/data/logs:/app/nginx-logs
@@ -17,7 +17,10 @@ services:
       - /nginx-shield/data:/app/data
       # Sync container time with host system time (read-only)
       - /etc/localtime:/etc/localtime:ro
-    ports:
-      # Web interface / API port
-      - "9000:9000"
-     # - "8881:8881" # Uncomment if you want to expose the API port for the geolocate service (if enabled)
+    environment:
+      # The localization module requires at least 2 GB of RAM to disable IP geolocation lookup (set to "true", "1", or "yes" to disable)
+      - DISABLE_GEOLOCATE=true
+      # GeoIP language code for country names ('it' for Italian, 'en' for English, 'fr' for French, 'es' for Spanish, 'de' for German)
+      - GEOIP_LANG=en
+    
+    
