@@ -15,6 +15,10 @@ services:
     container_name: nginx-shield
     restart: always
     network_mode: bridge
+    ports:
+      # Web interface / API port
+      - '8100:8100'
+     # - "8881:8881" # Uncomment if you want to expose the API port for the geolocate service (if enabled)
     environment:
       # The localization module requires at least 2 GB of RAM to disable IP geolocation lookup (set to "true", "1", or "yes" to disable)
       - DISABLE_GEOLOCATE=true
@@ -29,7 +33,4 @@ services:
       - /nginx-shield/data:/app/data
       # Sync container time with host system time (read-only)
       - /etc/localtime:/etc/localtime:ro
-    ports:
-      # Web interface / API port
-      - "8100:8100"
-     # - "8881:8881" # Uncomment if you want to expose the API port for the geolocate service (if enabled)
+    
