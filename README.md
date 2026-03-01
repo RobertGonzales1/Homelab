@@ -5,7 +5,7 @@ It Uses Proxmox as the Virtualization Platform.
 
 Network Hardware is Unifi
 
-Security is a Combination of Cloudflare + Crowdsec on the NGINX + Unifi IPS (Looking to use Fail to Ban in a future Rebuild)
+Security is a Combination of Cloudflare + Unifi IPS
 
 Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via Backblaze B2/S3 Buckets
 
