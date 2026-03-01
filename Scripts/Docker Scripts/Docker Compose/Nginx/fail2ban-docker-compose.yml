@@ -19,5 +19,5 @@ services:
       - /etc/localtime:/etc/localtime:ro
     ports:
       # Web interface / API port
-      - "8000:8000"
+      - "9000:9000"
      # - "8881:8881" # Uncomment if you want to expose the API port for the geolocate service (if enabled)
