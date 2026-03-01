@@ -1,3 +1,4 @@
+services:
  nginx-shield:
     image: maxlonplay/nginx-shield:latest
     container_name: nginx-shield
