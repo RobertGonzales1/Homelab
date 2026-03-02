@@ -41,6 +41,7 @@ LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with 
 17. Started Using Azure Static Web Apps to Host Web Sites for Family. Also Now Use CI/CD Pipelines to Deploy Websites to Azure From Github Respoitories. (02/2026)
 18. Now Using Wildcard Certificate on Nginx (Using DNS Challenge) for Homelab Domain with Cloudflare Proxy Enabled. (02/2026)
 19. Completed Rebuilding all LXC Containers to Linux Ubuntu Server with Docker (02/2026)
+20. Setup and Enabled DNSSEC on Homelab Domain With Cloudflare and Domain Registar (03/2026)
 
 # My TO-DO List:
 1. Set Up some Automation (Still need to figure out if I’m going to invest my time in Ansible or another product).
