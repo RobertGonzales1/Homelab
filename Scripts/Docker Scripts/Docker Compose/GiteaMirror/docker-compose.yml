@@ -6,11 +6,10 @@ services:
   gitea-mirror:
     image: ghcr.io/raylabshq/gitea-mirror:latest
     container_name: gitea-mirror
-    restart: unless-stopped
+    restart: always
     network_mode: bridge
     ports:
       - "${PORT:-4321}:4321"
-    user: ${PUID:-1000}:${PGID:-1000}
     volumes:
       - ./data:/app/data
     environment:
