@@ -44,6 +44,7 @@ services:
 #
 # 1. Create a .env file with only ONE required variable:
 #    BETTER_AUTH_SECRET=your-32-character-minimum-secret-key-here
+#    BETTER_AUTH_TRUSTED_ORIGINS=http://X.X.X.X:4321 With X Being the Local IP
 #
 # 2. Run:
 #    docker-compose -f docker-compose.alt.yml up -d
