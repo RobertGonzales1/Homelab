@@ -1,3 +1,4 @@
+#Make Sure VM Has CPU With AVX Support
 # Minimal Gitea Mirror deployment
 # Only includes what CANNOT be configured via the Web UI
 # Everything else can be set up through the web interface after deployment
