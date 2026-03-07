@@ -1,15 +1,15 @@
 version: "3.4"
 services:
- tdarr:
-  container_name: tdarr
-  image: ghcr.io/haveagitgat/tdarr:latest
-  restart: always
-  user: root
-  network_mode: bridge
-  ports:
+  tdarr:
+    container_name: tdarr
+    image: ghcr.io/haveagitgat/tdarr:latest
+    restart: always
+    user: root
+    network_mode: bridge
+    ports:
       - 8265:8265 # webUI port
       - 8266:8266 # server port
-  environment:
+    environment:
       - TZ=America/Los_Angeles
       - UMASK_SET=002
       - serverIP=10.30.1.2
@@ -25,13 +25,12 @@ services:
       - cronPluginUpdate=
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
-  volumes:
-    - /docker/tdarr/server:/app/server
-    - /docker/tdarr/configs:/app/configs
-    - /docker/tdarr/logs:/app/logs
-    - /media:/media
-    - /transcode_cache:/temp
-  
+    volumes:
+      - /docker/tdarr/server:/app/server
+      - /docker/tdarr/configs:/app/configs
+      - /docker/tdarr/logs:/app/logs
+      - /media:/media
+      - /transcode_cache:/temp
 volumes:
  media:
-      external: true
+  external: true
