@@ -32,9 +32,7 @@ services:
     - /docker/tdarr/logs:/app/logs
     - /media:/media
     - /transcode_cache:/temp
-  devices:
-    - /dev/dri:/dev/dri
-       
+  
 volumes:
  media:
       external: true
