@@ -12,8 +12,8 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK_SET=002
-      - nodeName=Node01
-      - serverIP=0.0.0.0
+      - nodeName=TdarrN01
+      - serverIP=10.30.1.3
       - serverPort=8266
       - inContainer=true
       - ffmpegVersion=7
