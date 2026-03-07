@@ -1,16 +1,14 @@
-version: "3.4"
 services:
   tdarr-node:
     container_name: tdarr-node
     image: ghcr.io/haveagitgat/tdarr_node:latest
     restart: always
+    user: root
     network_mode: bridge
     ports:
       - 8265:8265 # webUI port
     environment:
       - TZ=America/Los_Angeles
-      - PUID=${PUID}
-      - PGID=${PGID}
       - UMASK_SET=002
       - nodeName=TdarrN01
       - serverIP=10.30.1.3
@@ -34,19 +32,10 @@ services:
     volumes:
       - /docker/tdarr/configs:/app/configs
       - /docker/tdarr/logs:/app/logs
-      - /media:/media
+      - media:/media
       - /transcode_cache:/temp
 
-    devices:
-      - /dev/dri:/dev/dri
-    deploy:
-      resources:
-        reservations:
-          devices:
-          - driver: nvidia
-            count: all
-            capabilities: [gpu]
-    volumes:
-      media:
-        external: true
+volumes:
+  media:
+    external: true
 
