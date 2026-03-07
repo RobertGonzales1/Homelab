@@ -13,13 +13,13 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - UMASK_SET=002
-      - serverIP=0.0.0.0
+      - serverIP=10.30.1.2
       - serverPort=8266
       - webUIPort=8265
       - internalNode=false
       - inContainer=true
       - ffmpegVersion=7
-      - nodeName=MyInternalNode
+      - nodeName=TdarrS01
       - auth=false
       - openBrowser=true
       - maxLogSizeMB=10
