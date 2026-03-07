@@ -34,10 +34,6 @@ services:
     - /transcode_cache:/temp
   devices:
     - /dev/dri:/dev/dri
-  deploy:
-   resources:
-    reservations:
-     devices:
        
 volumes:
  media:
