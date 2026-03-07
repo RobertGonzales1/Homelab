@@ -4,14 +4,13 @@ services:
   container_name: tdarr
   image: ghcr.io/haveagitgat/tdarr:latest
   restart: always
+  user: root
   network_mode: bridge
   ports:
       - 8265:8265 # webUI port
       - 8266:8266 # server port
   environment:
       - TZ=America/Los_Angeles
-      - PUID=${PUID}
-      - PGID=${PGID}
       - UMASK_SET=002
       - serverIP=10.30.1.2
       - serverPort=8266
