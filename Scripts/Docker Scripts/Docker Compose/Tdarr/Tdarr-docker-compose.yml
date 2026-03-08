@@ -11,13 +11,13 @@ services:
     environment:
       - TZ=America/Los_Angeles
       - UMASK_SET=002
-      - serverIP=10.30.1.2
+      - serverIP=0.0.0.0
       - serverPort=8266
       - webUIPort=8265
       - internalNode=false
       - inContainer=true
       - ffmpegVersion=7
-      - nodeName=TdarrS01
+      - nodeName=Tdarr
       - auth=false
       - openBrowser=true
       - maxLogSizeMB=10
