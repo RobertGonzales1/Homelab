@@ -23,9 +23,9 @@ Backups Use Porxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?styl
 # The VMs I Use Contain:
 Cloud-Int with Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker
 
-Windows Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
+Windows ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
 
-LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker as I didn’t know the LXC containers all share the same Kernel.) (Completed 02/2026)
+LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) and ![Portainer](https://img.shields.io/badge/portainer-%2313BEF9.svg?style=for-the-badge&logo=portainer&logoColor=white) Portainer as I didn’t know the Multiple LXC containers on a Physical Host all share the same Kernel.) (Completed 02/2026)
 
 # The Github Projects I use are Below, check them out and Support the Projects:
 [Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (GitHub is not letting me make this link open in a new window.)
