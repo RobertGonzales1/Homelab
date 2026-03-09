@@ -1,15 +1,24 @@
 # My Homelab
 Note: None of the Code in This Repository is AI Generated (As Far As I Know). If I find out it is, I will Label it as AI. 
 
-It Uses Proxmox as the Virtualization Platform.
+Hardware:
 
-Network Hardware is Unifi
+2 Minisforum UM690 Pro Mini PCs As the Virtualization Hosts
 
-Security is a Combination of Cloudflare + Unifi IPS
+1 Dell 1L Mini PC for iMazing
 
-Storage is 2 Synology 8 bay NASs that uses CIFS (Linux VMs)/SMB and iSCSI (Windows VMs), Only Critical Data is Backed up via Backblaze B2/S3 Buckets
+Network Hardware is ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi Products
 
-Backups Use Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Windows Devices without VMs (Desktops, Laptops, etc...)) 
+Storage is 2 Synology 8 Bay NAS, 1 DS1819+ , 1 DS1821+
+
+Software:
+
+![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) as the Virtualization Platform.
+
+Security is a Combination of ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
+ + ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi IPS
+
+Backups Use ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
 Cloud-Int with Ubuntu Server with Docker
