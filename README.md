@@ -18,7 +18,7 @@ Proxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-ba
 Security is a Combination of Cloudflare ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
  and Ubiquiti ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi IPS
 
-Backups Use Porxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
+Backups Use Porxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
 Cloud-Int with Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker
