@@ -7,25 +7,24 @@ Hardware:
 
 1 Dell 1L Mini PC for iMazing
 
-Network Hardware is Ubiquiti ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi Products
+Network Hardware is Ubiquiti Unifi Products
 
 Storage is 2 Synology 8 Bay NAS, 1 DS1819+ , 1 DS1821+
 
 Software:
 
-Proxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) as the Virtualization Platform.
+Proxmox as the Virtualization Platform.
 
-Security is a Combination of Cloudflare ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
- and Ubiquiti ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi IPS
+Security is a Combination of Cloudflare and Ubiquiti Unifi IPS
 
-Backups Use Porxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
+Backups Use Porxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
-Cloud-Int with Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker
+Cloud-Int with Ubuntu Server with Docker
 
-Windows ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
+Windows Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
 
-LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) and ![Portainer](https://img.shields.io/badge/portainer-%2313BEF9.svg?style=for-the-badge&logo=portainer&logoColor=white) Portainer as I didn’t know the Multiple LXC containers on a Physical Host all share the same Kernel.) (Completed 02/2026)
+LXC Containers (I’m trying to rebuild these one at a time into Cloud-Int with Ubuntu Server with Docker and Portainer as I didn’t know the Multiple LXC containers on a Single Host all share the same Kernel.) (Completed 02/2026)
 
 # The Github Projects I use are Below, check them out and Support the Projects:
 [Projects Used in my Homelab](https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab) (GitHub is not letting me make this link open in a new window.)
