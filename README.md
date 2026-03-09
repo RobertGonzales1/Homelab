@@ -7,21 +7,21 @@ Hardware:
 
 1 Dell 1L Mini PC for iMazing
 
-Network Hardware is ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi Products
+Network Hardware is Ubiquiti ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi Products
 
 Storage is 2 Synology 8 Bay NAS, 1 DS1819+ , 1 DS1821+
 
 Software:
 
-![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) as the Virtualization Platform.
+Proxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) as the Virtualization Platform.
 
-Security is a Combination of ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
- + ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi IPS
+Security is a Combination of Cloudflare ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) 
+ and Ubiquiti ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) Unifi IPS
 
-Backups Use ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
+Backups Use Porxmox ![Proxmox](https://img.shields.io/badge/proxmox-proxmox?style=for-the-badge&logo=proxmox&logoColor=%23E57000&labelColor=%232b2a33&color=%232b2a33) Proxmox Backup Server (Proxmox VMs) + Synology Active Backup for Business (Non VM Windows Devices (Desktops, Laptops, etc...)) 
 
 # The VMs I Use Contain:
-Cloud-Int with Ubuntu Server with Docker
+Cloud-Int with Ubuntu ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) Server with Docker
 
 Windows Server 2022 (I Know its Mainstream Support is going EOL 10/2026, But I Already Rebuilt Everything from Server 2019 and didn't find out about the EOL until after I was done.)
 
