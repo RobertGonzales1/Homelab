@@ -13,7 +13,8 @@ services:
     ports:
       - "${PORT:-4321}:4321"
     volumes:
-      - gitea_mirror:/app/data
+      - ./data:/app/data
+      - gitea_mirror:gitea_mirror
     environment:
       # === ABSOLUTELY REQUIRED ===
       # This MUST be set and CANNOT be changed via UI
