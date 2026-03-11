@@ -13,7 +13,7 @@ services:
     ports:
       - "${PORT:-4321}:4321"
     volumes:
-      - ./data:/app/data
+      - gitea_mirror:/app/data
     environment:
       # === ABSOLUTELY REQUIRED ===
       # This MUST be set and CANNOT be changed via UI
@@ -44,7 +44,6 @@ services:
 #
 # 1. Create a .env file with only ONE required variable:
 #    BETTER_AUTH_SECRET=your-32-character-minimum-secret-key-here
-#    BETTER_AUTH_TRUSTED_ORIGINS=http://X.X.X.X:4321 With X Being the Local IP
 #
 # 2. Run:
 #    docker-compose -f docker-compose.alt.yml up -d
