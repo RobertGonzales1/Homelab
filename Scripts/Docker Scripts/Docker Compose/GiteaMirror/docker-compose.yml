@@ -39,6 +39,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 15s
+    
 # === QUICK START ===
 #
 # 1. Create a .env file with only ONE required variable:
