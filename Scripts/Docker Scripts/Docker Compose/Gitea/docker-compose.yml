@@ -6,10 +6,13 @@ services:
     restart: always
     network_mode: bridge
     volumes:
-      - ./data:/gitea_data
+      - gitea:/gitea_data
       - ./config:/gitea_config
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
       - "2222:2222"
+volumes:
+  gitea:
+    external: true
