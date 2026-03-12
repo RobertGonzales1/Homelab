@@ -14,6 +14,7 @@ services:
       - "${PORT:-4321}:4321"
     volumes:
       - ./data:/app/data
+      - gitea:/gitea
     environment:
       # === ABSOLUTELY REQUIRED ===
       # This MUST be set and CANNOT be changed via UI
@@ -39,6 +40,11 @@ services:
       timeout: 10s
       retries: 5
       start_period: 15s
+
+  volumes:
+  gitea:
+    external: true
+    
 # === QUICK START ===
 #
 # 1. Create a .env file with only ONE required variable:
