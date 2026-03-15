@@ -30,7 +30,7 @@
 ## 💻 Virtual Machines & Containers
 
 - **Ubuntu Server VMs** — Cloud-Init templated, running Docker + Portainer
-- **Windows Server 2022** — Rebuilt from Server 2019 *(Mainstream support EOL: 10/2026)*
+- **Windows Server 2022** — Rebuilt from Server 2019
 - **LXC Containers** — Fully migrated to Ubuntu Server + Docker VMs ✅ *(Completed 02/2026)*
 
 ---
