@@ -1,7 +1,7 @@
 # 🏠 My Homelab
 
-> **Note:** None of the code in this repository is AI-generated (as far as I know). 
-> If I discover otherwise, it will be labeled accordingly.
+> **Note:** None of the Proects Referenced in this repository is AI-Vibe Coded (as far as I know). 
+> If I discover otherwise, it will be labeled as "AI".
 
 ---
 
