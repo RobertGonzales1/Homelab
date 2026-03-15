@@ -109,4 +109,4 @@
 
 ## 🗺️ Network Diagram
 
-![Network Diagram](https://github.com/RobertGonzales1/Homelab/blob/Main/Network%20Diagrams/Network%20Diagram%2002-11-17.png?raw=true)
+![Network Diagram](https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Network%20Diagrams/Network%20Diagram%2002-11-17.png)
