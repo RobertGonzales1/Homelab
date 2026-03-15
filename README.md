@@ -70,6 +70,9 @@
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
 - [ ] Set up Home Assistant on dedicated IoT network hardware
 - [ ] Implement Proxmox HA / redundant failover once hardware allows
+- [ ] Update Windows VM Passwords
+- [ ] Go From Testing Pi-Hole on a few Machines to Subnet Wide Enablement
+- [ ] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 
 ---
 
