@@ -60,7 +60,7 @@ Welcome To My Homelab 2.0!</br>
 | 18 | Implemented wildcard certificate on Nginx via DNS challenge with Cloudflare | 02/2026 |
 | 19 | Completed migration of all LXC containers to Ubuntu Server + Docker | 02/2026 |
 | 20 | Enabled DNSSEC on Homelab domain via Cloudflare and domain registrar | 03/2026 |
-| 21 | Added Authentik SSO Soluition | 03/2026 |
+| 21 | Added Authentik SSO Solution | 03/2026 |
 | 22 | Configured Authentik to Use LDAP for Jellyfin Media Server and Proxy Forward Auth for Web Based Services | 03/2026 |
 | 23 | Configured Authentik to Use OAUTH2 for Immich Photo Server | 04/2026 | 
 
@@ -74,9 +74,9 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
 - [ ] Implement Proxmox HA / redundant failover once hardware allows
-- [ ] Add CrowdSec or Fail2Ban on NGINX anmd Authentik
-- [ ] Setup Acive Directory for Windows VMs
-- [ ] Go From Testing Pi-Hole on a few Machines to Subnet Wide Enablement
+- [ ] Add CrowdSec or Fail2Ban on NGINX and Authentik
+- [ ] Setup Active Directory for Windows VMs
+- [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
 - [ ] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (exploring Authentik)
@@ -87,7 +87,7 @@ Welcome To My Homelab 2.0!</br>
 ## ❔FAQ
 
 Question: Why dont you use Cloudflare Tunnels?
-Answer: I have a Video Streaming Service Plus a Photo Hositng Solution that allows Video Uploads, Both of those would Violate the Cloudflare Tunnel TOS. Also I dont want to have some services on the Tunnels and other Services using DDNS. I Decided its either one or the other for all services.
+Answer: I have a Video Streaming Service Plus a Photo Hosting Solution that allows Video Uploads, Both of those would Violate the Cloudflare Tunnel TOS. Also I dont want to have some services on the Tunnels and other Services using DDNS. I Decided its either one or the other for all services.
 
 Question: Why dont you use Clustering in Proxmox?
 Answer: Ive had the Clustering break in the past when ever updating one the 3 nodes I used to have, so for now no Clustering in proxmox. Maybe in the future if I get enough mini PCs going.
@@ -95,7 +95,7 @@ Answer: Ive had the Clustering break in the past when ever updating one the 3 no
 Question: Why do you use mini PCs and not a Racked Server?
 Answer: I dont have the physical space in my house or a dedicated room for one plus the noise would keep me up at night.
 
-Question: Why is every docker project you use in its own Linmux VM?
+Question: Why is every docker project you use in its own Linux VM?
 Answer: Easier for me to backup and restore using Proxmox Backup Server. Also I dont trust Portainer one day not paywalling how many docker containers you can run in each instance.
 
 ---
