@@ -1,0 +1,12 @@
+Uptime Kuma LXC
+Uptime Kuma is a monitoring and alerting system that tracks the availability and performance of servers, websites, and other internet-connected devices. It can be self-hosted and is open-source, offering a visually appealing interface for monitoring and receiving notifications about downtime events.
+
+To create a new Proxmox VE Uptime Kuma LXC, run the command below in the Proxmox VE Shell.
+To Update Uptime Kuma, run the command below (or type update) in the LXC Console.
+
+Copy
+
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/uptimekuma.sh)"
+
+⚡ Default Settings: 1GB RAM - 2GB Storage - 1vCPU ⚡
+Uptime Kuma Interface: IP:3001
