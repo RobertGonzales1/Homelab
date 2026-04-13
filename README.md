@@ -1,7 +1,8 @@
-# 🏠 My Homelab
+# 🏠 My Homelab 2.0
 
-> **Note:** None of the Projects Referenced in this repository is AI-Vibe Coded (as far as I know). 
-> If I discover otherwise, it will be labeled as "AI".
+Welcome To My Homelab 2.0!</br> 
+2.0, born from the ashes of an accidental credential leak that claimed the original repository. RIP Homelab 1.0, Aug 2025–Apr 2026</br>
+**Note:** None of the Projects Referenced in this repository is AI-Vibe Coded (as far as I know). If I discover otherwise, it will be labeled as "AI".
 
 ---
 
@@ -73,7 +74,6 @@
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
 - [ ] Implement Proxmox HA / redundant failover once hardware allows
-- [ ] Update Windows VM Passwords To Something Stronger
 - [ ] Add CrowdSec or Fail2Ban on NGINX anmd Authentik
 - [ ] Setup Acive Directory for Windows VMs
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet Wide Enablement
