@@ -1,0 +1,8 @@
+To create a new Proxmox VE MeTube LXC, run the command below in the Proxmox VE Shell.
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/metube.sh)"
+
+Location of config file
+/opt/metube/.env
+
+Port 8081

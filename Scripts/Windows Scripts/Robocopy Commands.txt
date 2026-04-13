@@ -1,0 +1,5 @@
+#Dry Run
+ROBOCOPY "U:\(0)BTPubOth\Complete\(0)GOGGamesDOTTo" "//10.120.1.4/Vault/Vault/(0)To Be Sorted/(0)PC Games/(0)GOGGamesDOTTo" /E /L
+
+#For Real
+ROBOCOPY "U:\(0)BTPubOth\Complete\(0)GOGGamesDOTTo" "//10.120.1.4/Vault/Vault/(0)To Be Sorted/(0)PC Games/(0)GOGGamesDOTTo" /E

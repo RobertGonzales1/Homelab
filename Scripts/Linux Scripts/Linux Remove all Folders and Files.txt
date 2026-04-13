@@ -1,0 +1,8 @@
+Remove all Folders and Files in a specific directory:
+
+rm -r directory_name
+
+
+Remove all Folders and Files in current folder:
+
+rm -r *
