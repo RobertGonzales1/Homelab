@@ -4,7 +4,7 @@ services:
     restart: always
     network_mode: bridge
     volumes:
-      - ./gitea:/data
+      - ./gitea-data:/data
       - ./config:/config
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
