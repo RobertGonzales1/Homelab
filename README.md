@@ -63,7 +63,7 @@ Welcome To My Homelab 2.0!</br>
 | 21 | Added Authentik SSO Solution | 03/2026 |
 | 22 | Configured Authentik to Use LDAP for Jellyfin Media Server and Proxy Forward Auth for Web Based Services | 03/2026 |
 | 23 | Configured Authentik to Use OAUTH2 for Immich Photo Server | 04/2026 | 
-| 24 | Installed and Configured Fail2Ban on Authentik and Nginx Servers | 04/2026 | 
+| 24 | Installed and Configured Fail2Ban on Authentik, Nginx, and Other Nginx/Internet Facing Servers | 04/2026 | 
 
 ---
 
