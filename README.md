@@ -2,7 +2,7 @@
 
 Welcome To My Homelab 2.0!</br> 
 2.0, born from the ashes of an accidental credential leak that claimed the original repository. RIP Homelab 1.0, Aug 2025–Apr 2026</br>
-**Note:** None of the Projects Referenced in this repository is AI-Vibe Coded (as far as I know). If I discover otherwise, it will be labeled as "AI".
+**Note:** None of the Projects Referenced in this repository is AI-Vibe Coded (as far as I know). If I discover otherwise, it will be labeled as "AI Generated".
 
 ---
 
@@ -74,7 +74,7 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Implement full offsite backup strategy (Backblaze currently covers critical data only)
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
-- [ ] Implement Proxmox HA / redundant failover once hardware allows
+- [ ] Implement Proxmox High Availability / redundant failover once hardware allows
 - [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
 - [ ] Setup Active Directory for Windows VMs
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
@@ -82,7 +82,7 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (exploring Authentik)
 - [ ] Give Windows VMs Static IPs (For Ansible)
-- [ ] Create Schedule/Script to Reboot Windows VMs
+- [ ] Create Schedule/Script to Reboot Windows VMs (May Use Ansible for this)
 ---
 
 ## ❔FAQ
