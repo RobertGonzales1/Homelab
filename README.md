@@ -10,7 +10,7 @@ Welcome To My Homelab 2.0!</br>
 
 | Component | Details |
 |---|---|
-| Virtualization Hosts | 2× Minisforum UM690 Pro Mini PCs |
+| Virtualization Hosts | 2× Minisforum UM690 Pro Mini PCs | 2x Dell 1L Mini PCs |
 | Misc Server | 1× Dell 1L Mini PC (iMazing) |
 | Network | Ubiquiti UniFi |
 | Storage | Synology DS1819+ & DS1821+ (2× 8-Bay NAS) |
@@ -78,7 +78,7 @@ Welcome To My Homelab 2.0!</br>
 - [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
 - [ ] Setup Active Directory for Windows VMs
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
-- [ ] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
+- [X] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (exploring Authentik)
 - [ ] Give Windows VMs Static IPs (For Ansible)
