@@ -10,13 +10,8 @@ set -euo pipefail
 
 echo "=== SSH Hardening Script ==="
 echo ""
-
-# Safety check
-read -rp "Have you confirmed SSH key auth works for this host? (yes/no): " CONFIRM
-if [[ "$CONFIRM" != "yes" ]]; then
-    echo "Aborting. Set up key auth first, then re-run this script."
-    exit 1
-fi
+echo "[!] WARNING: This disables password auth. Make sure key auth works first!"
+echo ""
 
 # Back up existing config
 BACKUP="/etc/ssh/sshd_config.bak.$(date +%Y%m%d%H%M%S)"
