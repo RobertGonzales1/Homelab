@@ -1,66 +1,105 @@
 #!/usr/bin/env bash
 # =============================================================
 # Paste this entire script into an SSH session to apply
-# kernel-level network hardening via sysctl.
+# a hardened sshd_config. It backs up your current config first.
+#
+# IMPORTANT: Make sure SSH key auth is working BEFORE running
+# this, or you WILL lock yourself out.
 # =============================================================
 set -euo pipefail
 
-echo "=== Sysctl Hardening Script ==="
+echo "=== SSH Hardening Script ==="
+echo ""
+echo "[!] WARNING: This disables password auth. Make sure key auth works first!"
 echo ""
 
-# Write the hardening config
-echo "[*] Writing /etc/sysctl.d/99-hardening.conf..."
-sudo tee /etc/sysctl.d/99-hardening.conf > /dev/null << 'SYSEOF'
-# --- IP Spoofing Protection ---
-net.ipv4.conf.all.rp_filter = 1
-net.ipv4.conf.default.rp_filter = 1
+# Back up existing config
+BACKUP="/etc/ssh/sshd_config.bak.$(date +%Y%m%d%H%M%S)"
+echo "[*] Backing up current config to $BACKUP"
+sudo cp /etc/ssh/sshd_config "$BACKUP"
 
-# --- Disable source routing ---
-net.ipv4.conf.all.accept_source_route = 0
-net.ipv4.conf.default.accept_source_route = 0
-net.ipv6.conf.all.accept_source_route = 0
+# Write the hardened config
+echo "[*] Writing hardened sshd_config..."
+sudo tee /etc/ssh/sshd_config > /dev/null << 'SSHEOF'
+# --- Network ---
+Port 2222
+AddressFamily inet
+ListenAddress 0.0.0.0
 
-# --- Disable ICMP redirects (prevents MITM) ---
-net.ipv4.conf.all.accept_redirects = 0
-net.ipv4.conf.default.accept_redirects = 0
-net.ipv4.conf.all.send_redirects = 0
-net.ipv4.conf.default.send_redirects = 0
-net.ipv6.conf.all.accept_redirects = 0
+# --- Protocol ---
+Protocol 2
 
-# --- Ignore ICMP broadcasts (prevents Smurf attacks) ---
-net.ipv4.icmp_echo_ignore_broadcasts = 1
+# --- Authentication ---
+PermitRootLogin no
+MaxAuthTries 3
+LoginGraceTime 30
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+AuthenticationMethods publickey
 
-# --- Ignore bogus ICMP error responses ---
-net.ipv4.icmp_ignore_bogus_error_responses = 1
+# --- Restrict Users (uncomment and edit) ---
+# AllowUsers robert
+# AllowGroups ssh-users
 
-# --- SYN flood protection ---
-net.ipv4.tcp_syncookies = 1
-net.ipv4.tcp_max_syn_backlog = 2048
-net.ipv4.tcp_synack_retries = 2
+# --- Key Exchange & Ciphers ---
+KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com
+HostKeyAlgorithms ssh-ed25519,rsa-sha2-512,rsa-sha2-256
 
-# --- Log suspicious packets ---
-net.ipv4.conf.all.log_martians = 1
-net.ipv4.conf.default.log_martians = 1
+# --- Session ---
+ClientAliveInterval 300
+ClientAliveCountMax 2
+MaxSessions 3
+MaxStartups 3:50:10
 
-# --- Prevent core dumps ---
-fs.suid_dumpable = 0
+# --- Forwarding & Tunnels ---
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTunnel no
+GatewayPorts no
 
-# --- Randomize memory layout (ASLR) ---
-kernel.randomize_va_space = 2
+# --- Logging ---
+SyslogFacility AUTH
+LogLevel VERBOSE
 
-# --- Restrict access to kernel logs ---
-kernel.dmesg_restrict = 1
+# --- Misc ---
+PrintMotd no
+PrintLastLog yes
+TCPKeepAlive yes
+PermitUserEnvironment no
+Compression no
+StrictModes yes
+SSHEOF
 
-# --- Restrict access to kernel pointers ---
-kernel.kptr_restrict = 2
-SYSEOF
+# Validate the config before restarting
+echo "[*] Validating config..."
+if sudo sshd -t; then
+    echo "[✓] Config is valid."
+else
+    echo "[✗] Config validation failed! Restoring backup..."
+    sudo cp "$BACKUP" /etc/ssh/sshd_config
+    echo "[!] Original config restored. Fix the errors and try again."
+    exit 1
+fi
 
-# Apply immediately
-echo "[*] Applying sysctl settings..."
-sudo sysctl --system
+# Restart sshd
+echo "[*] Restarting sshd..."
+sudo systemctl restart sshd
 
 echo ""
-echo "[✓] Done! Kernel hardening is active and will persist across reboots."
+echo "[✓] Done! SSH is now hardened on port 2222."
 echo ""
-echo "    To verify a setting:  sysctl net.ipv4.conf.all.rp_filter"
-echo "    To see all changes:   sysctl -a | grep -E 'rp_filter|syncookies|redirects'"
+echo "    ╔══════════════════════════════════════════════════╗"
+echo "    ║  DO NOT close this session yet!                  ║"
+echo "    ║  Open a NEW terminal and test:                   ║"
+echo "    ║    ssh -p 2222 -i ~/.ssh/your_key user@this-host ║"
+echo "    ║  If it works, you're good. If not, you still     ║"
+echo "    ║  have this session to fix things.                ║"
+echo "    ╚══════════════════════════════════════════════════╝"
+echo ""
+echo "    Backup saved at: $BACKUP"
