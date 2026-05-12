@@ -63,7 +63,8 @@ Welcome To My Homelab 2.0!</br>
 | 21 | Added Authentik SSO Solution | 03/2026 |
 | 22 | Configured Authentik to Use LDAP for Jellyfin Media Server and Proxy Forward Auth for Web Based Services | 03/2026 |
 | 23 | Configured Authentik to Use OAUTH2 for Immich Photo Server | 04/2026 | 
-| 24 | Installed and Configured Fail2Ban on Authentik, Nginx, and Other Nginx/Internet Facing Servers | 04/2026 | 
+| 24 | Installed and Configured Fail2Ban on Authentik, Nginx, and Other Nginx/Internet Facing Servers | 05/2026 | 
+| 25 | Changed BIOS on All VM Host Hardware to Power back on After a Power Outage. | 05/2026 |
 
 ---
 
@@ -78,7 +79,7 @@ Welcome To My Homelab 2.0!</br>
 - [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
 - [ ] Setup Active Directory for Windows VMs
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
-- [ ] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
+- [X] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (exploring Authentik)
 - [ ] Give Windows VMs Static IPs (For Ansible)
