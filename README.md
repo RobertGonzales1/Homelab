@@ -66,8 +66,8 @@ Welcome To My Homelab 2.0!</br>
 | 24 | Installed and Configured Fail2Ban on Authentik, Nginx, and Other Nginx/Internet Facing Servers | 05/2026 | 
 | 25 | Changed BIOS on All VM Host Hardware to Power back on After a Power Outage. | 05/2026 |
 | 26 | Installed and Configured Fail2Ban on all Linux VMs | 05/2026 |
-| 27 | Changed Default SSH Port on all Linux VMs to 2222, Also Hardened | 05/2026 |
-
+| 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
+| 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 ---
 
 ## 📋 To-Do List
