@@ -65,7 +65,9 @@ Welcome To My Homelab 2.0!</br>
 | 23 | Configured Authentik to Use OAUTH2 for Immich Photo Server | 04/2026 | 
 | 24 | Installed and Configured Fail2Ban on Authentik, Nginx, and Other Nginx/Internet Facing Servers | 05/2026 | 
 | 25 | Changed BIOS on All VM Host Hardware to Power back on After a Power Outage. | 05/2026 |
-
+| 26 | Installed and Configured Fail2Ban on all Linux VMs | 05/2026 |
+| 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
+| 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 ---
 
 ## 📋 To-Do List
@@ -86,7 +88,7 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Create Schedule/Script to Reboot Windows VMs (May Use Ansible for this)
 ---
 
-## ❔FAQ
+## ❔ FAQ
 
 Question: Why dont you use Cloudflare Tunnels?
 Answer: I have a Video Streaming Service Plus a Photo Hosting Solution that allows Video Uploads, Both of those would Violate the Cloudflare Tunnel TOS. Also I dont want to have some services on the Tunnels and other Services using DDNS. I Decided its either one or the other for all services.
