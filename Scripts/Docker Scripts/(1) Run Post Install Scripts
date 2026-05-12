@@ -1,4 +1,4 @@
-curl -fsSL https://raw.githubusercontent.com/user/repo/branch/script.sh | bash
+curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_docker.sh | bash
 curl -fsSL https://raw.githubusercontent.com/user/repo/branch/script.sh | bash
 curl -fsSL https://raw.githubusercontent.com/user/repo/branch/script.sh | bash
 curl -fsSL https://raw.githubusercontent.com/user/repo/branch/script.sh | bash
