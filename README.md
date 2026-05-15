@@ -68,6 +68,7 @@ Welcome To My Homelab 2.0!</br>
 | 26 | Installed and Configured Fail2Ban on all Linux VMs | 05/2026 |
 | 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
 | 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
+| 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
 ---
 
 ## 📋 To-Do List
