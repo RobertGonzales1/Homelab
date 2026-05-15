@@ -1,0 +1,6 @@
+#Install
+sudo apt install pipx
+pipx install ansible
+
+#Update/Upgrade
+pipx upgrade --include-injected ansible
