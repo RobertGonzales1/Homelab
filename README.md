@@ -69,7 +69,7 @@ Welcome To My Homelab 2.0!</br>
 | 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
 | 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 | 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
-| 30 | Setup and now using Ansible to Automate Docker and Linux Updates | 05/2026 |
+| 30 | Setup and now using Ansible to Automate Docker and Linux Updates (https://github.com/RobertGonzales1/Homelab_Ansible) | 05/2026 |
 ---
 
 ## 📋 To-Do List
