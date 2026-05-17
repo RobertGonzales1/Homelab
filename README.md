@@ -80,7 +80,7 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
 - [ ] Implement Proxmox High Availability / redundant failover once hardware allows
-- [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
+- [X] Add Fail2Ban on NGINX and Authentik
 - [ ] Setup Active Directory for Windows VMs
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
 - [X] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
