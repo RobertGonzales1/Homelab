@@ -69,11 +69,12 @@ Welcome To My Homelab 2.0!</br>
 | 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
 | 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 | 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
+| 30 | Setup and now using Ansible to Automate Docker and Linux Updates | 05/2026 |
 ---
 
 ## 📋 To-Do List
 
-- [ ] Set up automation — evaluating Ansible vs. Alternatives
+- [X] Set up automation Ansible
 - [ ] Improve storage architecture — considering tiered storage array
 - [ ] Implement full offsite backup strategy (Backblaze currently covers critical data only)
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
