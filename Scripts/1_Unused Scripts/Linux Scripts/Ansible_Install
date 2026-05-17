@@ -1,0 +1,7 @@
+#Install
+sudo apt install pipx
+pipx install ansible
+mkdir ansible_quickstart && cd ansible_quickstart
+
+#Update/Upgrade
+pipx upgrade --include-injected ansible

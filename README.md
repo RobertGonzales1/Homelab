@@ -10,7 +10,7 @@ Welcome To My Homelab 2.0!</br>
 
 | Component | Details |
 |---|---|
-| Virtualization Hosts | 2× Minisforum UM690 Pro Mini PCs |
+| Virtualization Hosts | 2× Minisforum UM690 Pro Mini PCs, 2× Dell 1L Mini PCs |
 | Misc Server | 1× Dell 1L Mini PC (iMazing) |
 | Network | Ubiquiti UniFi |
 | Storage | Synology DS1819+ & DS1821+ (2× 8-Bay NAS) |

@@ -12,4 +12,4 @@ Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
