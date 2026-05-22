@@ -56,7 +56,7 @@ Welcome To My Homelab 2.0!</br>
 | 14 | Reconfigured main switch and reorganized VLANs | 09/2025 |
 | 15 | Created first SSH key for Cloud-Init image | 01/2026 |
 | 16 | Started using custom Cloud-Init images; began rebuilding LXC containers | 01/2026 |
-| 17 | Deployed family websites via Azure Static Web Apps with CI/CD from GitHub | 02/2026 |
+| 17 | Deployed Family/Friends business websites via Azure Static Web Apps with CI/CD from GitHub | 02/2026 |
 | 18 | Implemented wildcard certificate on Nginx via DNS challenge with Cloudflare | 02/2026 |
 | 19 | Completed migration of all LXC containers to Ubuntu Server + Docker | 02/2026 |
 | 20 | Enabled DNSSEC on Homelab domain via Cloudflare and domain registrar | 03/2026 |
@@ -69,11 +69,12 @@ Welcome To My Homelab 2.0!</br>
 | 27 | Changed Default SSH Port on all Linux VMs | 05/2026 |
 | 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 | 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
+| 30 | Setup Ansible + Semaphore for Linux VM Automation and Monitoring. | 05/2026 |
 ---
 
 ## 📋 To-Do List
 
-- [ ] Set up automation — evaluating Ansible vs. Alternatives
+- [X] Set up automation Ansible + Semaphore
 - [ ] Improve storage architecture — considering tiered storage array
 - [ ] Implement full offsite backup strategy (Backblaze currently covers critical data only)
 - [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
