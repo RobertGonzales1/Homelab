@@ -1,0 +1,3 @@
+#Add SSH Key To Proxmox
+echo "your-public-key-here" >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
