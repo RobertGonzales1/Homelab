@@ -85,9 +85,9 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Go From Testing Pi-Hole on a few Machines to Subnet-Wide Enablement
 - [X] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
-- [X] Get SSO Solution (exploring Authentik)
+- [X] Get SSO Solution (Authentik)
 - [ ] Give Windows VMs Static IPs (For Ansible)
-- [ ] Create Schedule/Script to Reboot Windows VMs (May Use Ansible for this)
+- [ ] Create Schedule/Script to Reboot Windows VMs (Will Use Ansible for this)
 ---
 
 ## ❔ FAQ
