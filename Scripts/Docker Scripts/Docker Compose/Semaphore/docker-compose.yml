@@ -1,0 +1,14 @@
+name: semaphore
+services:
+    semaphore:
+        ports:
+            - 3000:3000
+        container_name: semaphore
+        environment:
+            - SEMAPHORE_DB_DIALECT=sqlite
+            - SEMAPHORE_ADMIN=admin
+            - SEMAPHORE_ADMIN_PASSWORD=changeme
+            - SEMAPHORE_ADMIN_NAME=Admin
+            - SEMAPHORE_ADMIN_EMAIL=admin@localhost
+        restart: always
+        image: semaphoreui/semaphore:latest
