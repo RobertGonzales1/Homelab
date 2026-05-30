@@ -1,0 +1,10 @@
+name: flarsolver
+services:
+    flaresolverr:
+        container_name: flaresolverr
+        ports:
+            - 8191:8191
+        environment:
+            - LOG_LEVEL=info
+        restart: always
+        image: ghcr.io/flaresolverr/flaresolverr:latest
