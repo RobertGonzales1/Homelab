@@ -86,7 +86,7 @@ Welcome To My Homelab 2.0!</br>
 - [X] Change BIOS Settings on VM Hosts to Auto Start After a Power Outage
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (Authentik)
-- [ ] Give Windows VMs Static IPs (For Ansible)
+- [X] Give Windows VMs Static IPs (For Ansible)
 - [ ] Create Schedule/Script to Reboot Windows VMs (Will Use Ansible for this)
 ---
 
