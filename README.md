@@ -70,6 +70,7 @@ Welcome To My Homelab 2.0!</br>
 | 28 | Hardened Sysctl on all Linux VMs | 05/2026 |
 | 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
 | 30 | Setup Ansible + Semaphore for Linux VM Automation and Monitoring. | 05/2026 |
+| 31 | Setup WinRM on Windows Server VMs and added to Ansible + Semaphore for VM Automation and Monitoring. | 06/2026 |
 ---
 
 ## 📋 To-Do List
@@ -87,7 +88,7 @@ Welcome To My Homelab 2.0!</br>
 - [ ] Get Dedicated Hardware for Proxmox Backup Server (Maybe Have 2 of Them for Redundancy?)
 - [X] Get SSO Solution (Authentik)
 - [X] Give Windows VMs Static IPs (For Ansible)
-- [ ] Create Schedule/Script to Reboot Windows VMs (Will Use Ansible for this)
+- [X] Create Schedule/Script to Reboot Windows VMs (Will Use Ansible for this)
 ---
 
 ## ❔ FAQ
