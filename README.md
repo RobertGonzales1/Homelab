@@ -89,6 +89,7 @@ Welcome To My Homelab 2.0!</br>
 - [X] Get SSO Solution (Authentik)
 - [X] Give Windows VMs Static IPs (For Ansible)
 - [X] Create Schedule/Script to Reboot Windows VMs (Will Use Ansible for this)
+- [ ] Research Ceph for Proxmox
 ---
 
 ## ❔ FAQ
