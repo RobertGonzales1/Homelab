@@ -10,3 +10,6 @@ Password Reset URL: Empty
 LDAP Bind User: cn=ldapservice,ou=users,dc=ldap,dc=goauthentik,dc=io
 LDAP Bind User Password: The password or token for the LDAP service account. (Check Bitwarden)
 LDAP Base DN for Searches: dc=ldap,dc=goauthentik,dc=io
+
+#REQUIRED FIELD BELOW Save and Test LDAP Server Settings Button
+LDAP Search Filter: (objectClass=user)
