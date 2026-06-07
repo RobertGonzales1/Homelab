@@ -1,6 +1,7 @@
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_docker.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_portainer.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_fail2ban_AI_Generated.sh | bash
+curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_watchtower.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/apply_sysctl_hardening_AI_generated.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/apply_sshd_hardening_AI_generated.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/Add_Semaphore_Ansible_VM_to_Fail2Ban_Whitelist.sh | bash
