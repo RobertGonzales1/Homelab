@@ -1,4 +1,4 @@
-curl -fsSL https://github.com/RobertGonzales1/Homelab/blob/a38d0710a0cb647d86f344ab050e6d7b1f249920/Scripts/Docker%20Scripts/Fix_Corrupt_Portainer_Container.sh | bash
+curl -fsSL https://github.com/RobertGonzales1/Homelab/blob/3a760b58bfcc3df571fdd867395b628b5eadc45d/Scripts/Docker%20Scripts/Fix_Corrupt_Portainer_Container.sh | bash
 
 #or
 
