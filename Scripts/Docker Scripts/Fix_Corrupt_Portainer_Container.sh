@@ -1,4 +1,4 @@
-#curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/blob/main/Scripts/Docker%20Scripts/Fix_Corrupt_Portainer_Container.sh | bash
+#curl -fsSL https://github.com/RobertGonzales1/Homelab/blob/a38d0710a0cb647d86f344ab050e6d7b1f249920/Scripts/Docker%20Scripts/Fix_Corrupt_Portainer_Container.sh | bash
 
 sudo docker stop portainer
 sudo docker rm portainer
