@@ -106,6 +106,9 @@ Answer: I dont have the physical space in my house or a dedicated room for one p
 Question: Why is every docker project you use in its own Linux VM?
 Answer: Easier for me to backup and restore using Proxmox Backup Server. Also I dont trust Portainer one day not paywalling how many docker containers you can run in each instance.
 
+Question: Why not Use Ansible to Update the Docker Containers? Why Use Watchtower?
+Answer: The Ansible Playbook I was using kept Renaming the Docker Container Image Names to a String of Random Letters and Numbers, Causing the Next Update pass to Fail. Watchtower keeps the Image name intact. 
+
 ---
 ## 💻 Tech Stack
 AI <br> 
