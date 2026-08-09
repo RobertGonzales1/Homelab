@@ -71,6 +71,7 @@ Welcome To My Homelab 2.0!</br>
 | 29 | Now Calling Scripts From My Github via curl for Linux VMs Instead of Just Copying and Pasting in SSH Terminal | 05/2026 |
 | 30 | Setup Ansible + Semaphore for Linux VM Automation and Monitoring. | 05/2026 |
 | 31 | Setup WinRM on Windows Server VMs and added to Ansible + Semaphore for VM Automation and Monitoring. | 06/2026 |
+| 32 | Migrated to Zone Based Firewall on Unifi and Re-Set Up Custom Rules and VLAN/Zone Isolation | 08/2026 |
 ---
 
 ## 📋 To-Do List
