@@ -157,7 +157,7 @@ Programming Languages <br>
 
 ## 🔗 Projects Used in This Homelab
 
-[View my Projects Used in My Homelab on GitHub »]([https://github.com/stars/RobertGonzales1/lists/used-in-my-homelab](https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use)) <br>
+[View my Projects Used in My Homelab on GitHub »](https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use) <br>
 
 ---
 
