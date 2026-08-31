@@ -1,0 +1,1 @@
+gogcli-renamer.exe manifest.json slug
