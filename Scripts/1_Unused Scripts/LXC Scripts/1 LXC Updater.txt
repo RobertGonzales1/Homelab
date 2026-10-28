@@ -1,0 +1,7 @@
+Check none of the containers have 100% disk useage first.
+
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/update-lxcs.sh)"
+
+Skip all Unused and Cloudflare Containers.
+
+Also Nginx might give you a problem due to Crowdsec
