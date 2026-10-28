@@ -1,0 +1,7 @@
+To create a new Proxmox VE Traefik LXC, run the command below in the Proxmox VE Shell.
+
+
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/traefik.sh)"
+
+
+Traefik Interface: IP:8080

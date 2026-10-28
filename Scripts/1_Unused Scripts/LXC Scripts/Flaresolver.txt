@@ -1,0 +1,14 @@
+FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.
+
+To create a new Proxmox VE FlareSolverr LXC, run the command below in the Proxmox VE Shell.
+To Update FlareSolverr, run the command below (or type update) in the LXC Console.
+
+Copy
+
+
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/flaresolverr.sh)"
+
+
+⚡ Default Settings: 512MiB RAM - 4GB Storage - 1CPU ⚡
+
+FlareSolverr Interface: IP:8191
