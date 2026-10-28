@@ -1,0 +1,6 @@
+sudo docker run -d \
+  --name=flaresolverr \
+  -p 8191:8191 \
+  -e LOG_LEVEL=info \
+  --restart always \
+  ghcr.io/flaresolverr/flaresolverr:latest
