@@ -1,0 +1,10 @@
+sudo docker run -d \
+--name Notifiarr \
+-h notifiarr \
+--restart=always \
+--privileged \
+-p 5454:5454 \
+-v /notifiarrconfig/:/config \
+-v /var/run/utmp:/var/run/utmp \
+-v /etc/machine-id:/etc/machine-id \
+golift/notifiarr
