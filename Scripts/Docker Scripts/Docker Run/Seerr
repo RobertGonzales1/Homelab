@@ -1,0 +1,10 @@
+sudo docker run -d \
+  --name seerr \
+  --init \
+  -e LOG_LEVEL=debug \
+  -e TZ=America/Los_Angeles \
+  -e PORT=5055 \
+  -p 5055:5055 \
+  -v /appdata/config:/app/config \
+  --restart always \
+  ghcr.io/seerr-team/seerr:latest
