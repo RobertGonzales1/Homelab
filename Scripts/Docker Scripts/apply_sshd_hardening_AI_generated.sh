@@ -76,10 +76,14 @@ Compression no
 StrictModes yes
 
 # --- Homelab only: refuse logins from outside x.x.x.x/23 ---
-# Must stay LAST: everything after a Match line applies only to that match.
-# Same block (same markers) the SSH_Allow_Homelab_Only Ansible playbook manages.
+# ...and from the Tailscale subnet routers (tailscale01/02), so there's no SSH
+# over Tailscale. Must stay LAST: everything after a Match line applies only to
+# that match. Same block (same markers) the SSH_Allow_Homelab_Only Ansible
+# playbook manages.
 # BEGIN ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
 Match Address *,!x.x.x.x/23,!127.0.0.0/8,!::1
+    DenyUsers *
+Match Address x.x.x.x,x.x.x.x
     DenyUsers *
 # END ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
 SSHEOF
@@ -113,7 +117,7 @@ elif systemctl is-active --quiet sshd.service; then
 fi
 
 echo ""
-echo "[✓] Done! SSH is now hardened on port 2222 and only accepts logins from x.x.x.x/23."
+echo "[✓] Done! SSH is now hardened on port 2222 and only accepts logins from x.x.x.x/23 (not over Tailscale)."
 echo ""
 echo "    ╔══════════════════════════════════════════════════╗"
 echo "    ║  DO NOT close this session yet!                  ║"
