@@ -80,7 +80,7 @@ Welcome To My Homelab 3.0!</br>
 - [X] Set up automation Ansible + Semaphore
 - [ ] Improve storage architecture — considering tiered storage array
 - [ ] Implement full offsite backup strategy (Backblaze currently covers critical data only)
-- [ ] Sync Pi-Hole instances or implement load balancing (exploring Kubernetes)
+- [X] Sync Pi-Hole instances or implement load balancing ~~(exploring Kubernetes)~~ (Now doing this with an Ansible Playbook)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
 - [ ] Implement Proxmox High Availability / redundant failover once hardware allows
 - [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
@@ -109,7 +109,7 @@ Question: Why is every docker project you use in its own Linux VM?
 Answer: Easier for me to backup and restore using Proxmox Backup Server. Also I dont trust Portainer one day not paywalling how many docker containers you can run in each instance.
 
 Question: Why not Use Ansible to Update the Docker Containers? Why Use Watchtower?
-Answer: The Ansible Playbook I was using kept Renaming the Docker Container Image Names to a String of Random Letters and Numbers, Causing the Next Update pass to Fail. Watchtower keeps the Image name intact. 
+Answer: The Ansible Playbook I was using kept Renaming the Docker Container Image Names to a String of Random Letters and Numbers, Causing the Next Update pass to Fail. Watchtower keeps the Image name intact. (Ansible Now Controls when Watchtower Checks for a new image so I have time to stop it if a Docker Image Repository gets compromised.)
 
 ---
 ## 💻 Tech Stack
@@ -160,13 +160,6 @@ Programming Languages <br>
 ## 🔗 Projects Used in This Homelab
 
 [View my Projects Used in My Homelab on GitHub »](https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use) <br>
-
----
-
-## Ansible Playbooks
-
-[View my Ansible Playbooks Repo on Github »]([https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use](https://github.com/RobertGonzales1/Homelab_Ansible
-) <br>
 
 ---
 
