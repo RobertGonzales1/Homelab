@@ -10,6 +10,15 @@ set -euo pipefail
 
 SSH_PORT="${1:-2222}"   # Match your sshd_config Port
 
+# Never ban these: localhost, Semaphore (x.x.x.x) and the admin PC (x.x.x.x).
+# SSH only accepts logins from x.x.x.x/23, so only homelab machines can get
+# banned - add your SSH jump VM here, or pass IGNORE_IPS="..." when running.
+IGNORE_IPS="${IGNORE_IPS:-127.0.0.1/8 ::1 x.x.x.x x.x.x.x}"
+# On the Semaphore VM, Semaphore's container connects from a Docker address.
+if hostname -I 2>/dev/null | tr ' ' '\n' | grep -qx 'x.x.x.x'; then
+    IGNORE_IPS="$IGNORE_IPS 172.16.0.0/12"
+fi
+
 echo "=== Fail2Ban Installer for Homelab ==="
 echo ""
 
@@ -29,8 +38,8 @@ maxretry = 3
 banaction = iptables-multiport
 backend = systemd
 
-# Optional: whitelist your trusted IPs so you don't lock yourself out
-# ignoreip = 127.0.0.1/8 10.0.10.0/24
+# Never ban localhost, Semaphore or the admin PC (see IGNORE_IPS above)
+ignoreip = ${IGNORE_IPS}
 
 [sshd]
 enabled  = true
