@@ -1,7 +1,7 @@
-# 🏠 My Homelab 2.0
+# 🏠 My Homelab 3.0
 
 Welcome To My Homelab 3.0!</br> 
-3.0, re-born from the ashes of an accidental password left on published document that claimed the 2.0 repository. RIP Homelab 3.0, Apr 2026–Oct 2026</br>
+3.0, re-born from the ashes of an accidental password left on a published document that claimed the 2.0 repository. RIP Homelab 2.0, Apr 2026–Oct 2026</br>
 2.0, born from the ashes of an accidental credential leak that claimed the original repository. RIP Homelab 1.0, Aug 2025–Apr 2026</br>
 **Note:** None of the Projects Referenced in this repository is AI-Vibe Coded (as far as I know). If I discover otherwise, it will be labeled as "AI Generated".
 
@@ -73,6 +73,30 @@ Welcome To My Homelab 3.0!</br>
 | 30 | Setup Ansible + Semaphore for Linux VM Automation and Monitoring. | 05/2026 |
 | 31 | Setup WinRM on Windows Server VMs and added to Ansible + Semaphore for VM Automation and Monitoring. | 06/2026 |
 | 32 | Migrated to Zone Based Firewall on Unifi and Re-Set Up Custom Rules and VLAN/Zone Isolation | 08/2026 |
+| 33 | Disabled Unencrypted WinRM and Basic Authentication on All Windows Server VMs | 11/2026 |
+| 34 | Restricted SSH on All Linux VMs, Proxmox Hosts and PBS to the Homelab Network Only (Rolled Out by Ansible With an Automatic Undo if Access Breaks) | 11/2026 |
+| 35 | Blocked SSH Logins Arriving Through the Tailscale Subnet Routers | 11/2026 |
+| 36 | Limited the Fail2Ban Ignore List to Localhost, Semaphore and the Jump Servers Only | 11/2026 |
+| 37 | Updated the New-VM Setup Script to Apply the Same SSH and Fail2Ban Hardening | 11/2026 |
+| 38 | Enabled TOTP MFA on Semaphore | 11/2026 |
+| 39 | Confirmed GitHub Secret Scanning and Push Protection on My Repos; Removed My Gmail Address From Public Commit History | 11/2026 |
+| 40 | Added Discord Failure Alerts and a 4-Hour Task Timeout to Every Ansible Playbook | 11/2026 |
+| 41 | Added a Weekly Pending-Updates Report for the Proxmox Hosts and PBS | 11/2026 |
+| 42 | Scheduled Watchtower Container Updates for Quiet Hours, With Discord Notifications | 11/2026 |
+| 43 | Staggered Pi-hole and Tailscale Reboots So DNS and Remote Access Never Go Down All at Once | 11/2026 |
+| 44 | Built Two-Tier Pi-hole Blocklists (Malware-Only for Everyone, Malware + Ads for Select Machines) and Removed Dead Lists | 11/2026 |
+| 45 | Built a Custom Lookalike/Typosquat Domain Blocklist for 34 Brands, Refreshed Monthly by Ansible | 11/2026 |
+| 46 | Automated a Daily Pi-hole Blocklist Sync From GitHub, With Validation and Health Checks | 11/2026 |
+| 47 | Automated Weekly Pi-hole Updates, One Server at a Time | 11/2026 |
+| 48 | Fixed Two Pi-holes Silently Refusing DNS From Other Subnets; Ansible Now Enforces the Setting | 11/2026 |
+| 49 | Audited SSH on All Linux VMs: Password Login and Root Password Login Are Off Everywhere | 11/2026 |
+| 50 | Turned On SSH Host Key Verification for Ansible (Pinned Host Keys for All 30 Linux Hosts) | 11/2026 |
+| 51 | Expanded the Monthly SSH Audit to Proxmox Hosts and PBS, and Made It Fail Instead of Silently Passing | 11/2026 |
+| 52 | Turned Off SSH Password Logins on All Proxmox Hosts and PBS (Root by SSH Key Only) | 11/2026 |
+| 53 | Replaced the PBS Root Password on All Proxmox Hosts With Per-Host Backup-Only API Tokens | 11/2026 |
+| 54 | Added Weekly Backup Verification on PBS and Discord Alerts for Failed Backup Jobs | 11/2026 |
+| 55 | Moved Security Issues to a Private Repo and Made the Ansible Repo Private (Read-Only Deploy Key for Semaphore) | 11/2026 |
+
 ---
 
 ## 📋 To-Do List
@@ -80,7 +104,7 @@ Welcome To My Homelab 3.0!</br>
 - [X] Set up automation Ansible + Semaphore
 - [ ] Improve storage architecture — considering tiered storage array
 - [ ] Implement full offsite backup strategy (Backblaze currently covers critical data only)
-- [X] Sync Pi-Hole instances or implement load balancing ~~(exploring Kubernetes)~~ (Now doing this with an Ansible Playbook)
+- [X] Sync Pi-Hole instances or implement load balancing ~~(exploring Kubernetes)~~ (Blocklists are now synced by an Ansible Playbook)
 - [ ] Set up Home Assistant with dedicated hardware on IoT network
 - [ ] Implement Proxmox High Availability / redundant failover once hardware allows
 - [X] Add CrowdSec or Fail2Ban on NGINX and Authentik
@@ -117,6 +141,7 @@ Answer: The Ansible Playbook I was using kept Renaming the Docker Container Imag
 AI <br> 
 Used to Help With Website CSS <br>
 Also Used to Help Format this Readme <br>
+Also Used to Help Write the Ansible Playbooks and Scripts <br>
 [![ChatGPT](https://custom-icon-badges.demolab.com/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)](#)
 [![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](#) <br>
 
