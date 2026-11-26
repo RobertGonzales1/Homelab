@@ -1,0 +1,9 @@
+# Run in an elevated PowerShell on each Windows server so Ansible can manage it.
+# Ansible connects with NTLM over HTTP (port 5985); pywinrm encrypts every message,
+# so unencrypted traffic and Basic auth stay off.
+winrm quickconfig -force
+winrm set winrm/config/service '@{AllowUnencrypted="false"}'
+winrm set winrm/config/service/auth '@{Basic="false"}'
+# Let local admin accounts use full admin rights over WinRM
+# (needed for the .\Username logins in Homelab_Ansible/Inventory/Windows_VMs.yml)
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f

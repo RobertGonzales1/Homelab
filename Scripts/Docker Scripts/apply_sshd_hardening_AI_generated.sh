@@ -74,7 +74,23 @@ TCPKeepAlive yes
 PermitUserEnvironment no
 Compression no
 StrictModes yes
+
+# --- Homelab only: refuse logins from outside x.x.x.x/23 ---
+# ...and from the Tailscale subnet routers (tailscale01/02), so there's no SSH
+# over Tailscale. Must stay LAST: everything after a Match line applies only to
+# that match. Same block (same markers) the SSH_Allow_Homelab_Only Ansible
+# playbook manages.
+# BEGIN ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
+Match Address *,!x.x.x.x/23,!127.0.0.0/8,!::1
+    DenyUsers *
+Match Address x.x.x.x,x.x.x.x
+    DenyUsers *
+# END ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
 SSHEOF
+
+# With socket activation (Ubuntu 24.04) /run/sshd may not exist yet,
+# and sshd -t refuses to run without it.
+sudo mkdir -p /run/sshd
 
 # Validate the config before restarting
 echo "[*] Validating config..."
@@ -87,12 +103,21 @@ else
     exit 1
 fi
 
-# Restart sshd
+# Restart sshd. Ubuntu 24.04 names the service "ssh" and listens through
+# ssh.socket (whose port is generated from sshd_config on daemon-reload).
 echo "[*] Restarting sshd..."
-sudo systemctl restart sshd
+sudo systemctl daemon-reload
+if systemctl is-enabled --quiet ssh.socket 2>/dev/null; then
+    sudo systemctl restart ssh.socket
+fi
+if systemctl is-active --quiet ssh.service; then
+    sudo systemctl restart ssh.service
+elif systemctl is-active --quiet sshd.service; then
+    sudo systemctl restart sshd.service
+fi
 
 echo ""
-echo "[✓] Done! SSH is now hardened on port 2222."
+echo "[✓] Done! SSH is now hardened on port 2222 and only accepts logins from x.x.x.x/23 (not over Tailscale)."
 echo ""
 echo "    ╔══════════════════════════════════════════════════╗"
 echo "    ║  DO NOT close this session yet!                  ║"

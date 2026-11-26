@@ -1,3 +1,0 @@
-winrm quickconfig -force
-winrm set winrm/config/service '@{AllowUnencrypted="false"}'
-winrm set winrm/config/service/auth '@{Basic="false"}'
