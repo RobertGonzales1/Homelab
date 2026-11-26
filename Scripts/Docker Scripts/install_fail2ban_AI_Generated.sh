@@ -10,10 +10,13 @@ set -euo pipefail
 
 SSH_PORT="${1:-2222}"   # Match your sshd_config Port
 
-# Never ban these: localhost, Semaphore (x.x.x.x) and the admin PC (x.x.x.x).
-# SSH only accepts logins from x.x.x.x/23, so only homelab machines can get
-# banned - add your SSH jump VM here, or pass IGNORE_IPS="..." when running.
-IGNORE_IPS="${IGNORE_IPS:-127.0.0.1/8 ::1 x.x.x.x x.x.x.x}"
+# Never ban these: localhost, Semaphore (x.x.x.x) and the SSH jump VMs
+# (x.x.x.x, backup x.x.x.x). Everything else in the homelab CAN be banned:
+# SSH only accepts logins from x.x.x.x/23, so Fail2Ban is the backstop against a
+# compromised homelab machine (e.g. the internet-facing Nginx). Tailscale is not
+# trusted and stays off this list. Override with IGNORE_IPS="..." when running.
+# Same list as Homelab_Ansible/Playbooks/Linux_Fail2Ban_Set_Ignore_IPs.yml.
+IGNORE_IPS="${IGNORE_IPS:-127.0.0.1/8 ::1 x.x.x.x x.x.x.x x.x.x.x}"
 # On the Semaphore VM, Semaphore's container connects from a Docker address.
 if hostname -I 2>/dev/null | tr ' ' '\n' | grep -qx 'x.x.x.x'; then
     IGNORE_IPS="$IGNORE_IPS 172.16.0.0/12"
@@ -38,7 +41,7 @@ maxretry = 3
 banaction = iptables-multiport
 backend = systemd
 
-# Never ban localhost, Semaphore or the admin PC (see IGNORE_IPS above)
+# Never ban localhost, Semaphore or the jump VMs (see IGNORE_IPS above)
 ignoreip = ${IGNORE_IPS}
 
 [sshd]
