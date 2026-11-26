@@ -6,3 +6,20 @@ sudo docker run -d \
 -e WATCHTOWER_SCHEDULE="0 50 2 * * *" \
 nickfedor/watchtower
 
+
+With Discord notifications (posts only when something is updated or fails).
+Webhook https://discord.com/api/webhooks/<ID>/<TOKEN> becomes discord://<TOKEN>@<ID>.
+Fill in your own values and never commit them - this repo is public.
+Start the command with a space so it stays out of your shell history.
+
+sudo docker run -d \
+--name watchtower \
+--restart=always \
+--volume /var/run/docker.sock:/var/run/docker.sock \
+-e TZ=America/Los_Angeles \
+-e WATCHTOWER_SCHEDULE="0 50 2 * * *" \
+-e WATCHTOWER_NOTIFICATION_URL="discord://<TOKEN>@<ID>?username=Watchtower" \
+-e WATCHTOWER_NOTIFICATIONS_HOSTNAME="$(hostname)" \
+-e WATCHTOWER_NO_STARTUP_MESSAGE=true \
+nickfedor/watchtower
+
