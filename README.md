@@ -163,10 +163,34 @@ Programming Languages <br>
 
 ---
 
-## Ansible Playbooks
+## 🤖 Ansible Automation
 
-[View my Ansible Playbooks Repo on Github »]([https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use](https://github.com/RobertGonzales1/Homelab_Ansible
-) <br>
+All of these run on a schedule (or on demand) from Ansible Semaphore and report to Discord when something needs attention. The playbook repository itself is private, since it describes the internal network.
+
+| Area | Playbook | What it does |
+|---|---|---|
+| Linux / Docker | Update_Linux_Packages | Weekly OS updates on every Linux VM |
+| Linux / Docker | Enforce_Unattended_Upgrades | Keeps automatic security updates switched on |
+| Linux / Docker | Check_Memory_Usage, Check_Disk_Space | Hourly resource checks with alerts |
+| Linux / Docker | Container_Health_Check | Hourly check that every container is running and healthy |
+| Linux / Docker | Watchtower_Schedule | Container auto-updates in a quiet-hours window, with Discord notifications |
+| Linux / Docker | Log_Rotation, Journal_Cleanup, Prune_Images | Weekly housekeeping |
+| Linux / Docker | Reboot_Age_Report | Flags hosts that need a reboot after updates |
+| Security | SSH_Allow_Homelab_Only | SSH only accepted from the homelab network, rolled out with an automatic undo |
+| Security | SSH_Collect_Host_Keys | Builds and checks the pinned SSH host keys Ansible trusts |
+| Security | SSH_Key_Audit | Monthly audit of SSH password/root login settings and authorized keys on every host |
+| Security | Fail2Ban_Status_Check, Fail2Ban_Set_Ignore_IPs | Fail2Ban health and a minimal, consistent ignore list |
+| Proxmox / PBS | Proxmox_Host_Health, VM_Resource_Audit | Host health and VM sizing reports |
+| Proxmox / PBS | Proxmox_and_PBS_Pending_Updates | Weekly report of pending hypervisor/backup-server updates |
+| Proxmox / PBS | PBS_Backup_Verification | Daily check that every VM has a recent backup |
+| Proxmox / PBS | PBS_Backup_Tokens | Each hypervisor backs up with its own backup-only API token |
+| Proxmox / PBS | PBS_SSH_Keys_Only | Key-only SSH on the hypervisors and backup server |
+| Pi-hole | Pihole_Sync_Adlists | Daily sync of each Pi-hole's blocklists from this repo, with validation and health checks |
+| Pi-hole | Pihole_Update | Weekly Pi-hole updates, one server at a time |
+| Pi-hole | Pihole_Refresh_Lookalike_Domains | Monthly refresh of the custom lookalike/typosquat blocklist |
+| Windows | Windows_Update, Windows_Auto_Reboot | Patching and scheduled reboots |
+| Windows | Check_Disk_Space, Check_Memory_Usage, Disk_Cleanup | Resource checks and cleanup |
+| Windows | Firewall_Check, Admin_Audit, Reboot_Age_Report | Firewall, local admin and reboot reports |
 
 ---
 
