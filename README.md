@@ -163,6 +163,13 @@ Programming Languages <br>
 
 ---
 
+## Ansible Playbooks
+
+[View my Ansible Playbooks Repo on Github »]([https://github.com/stars/RobertGonzales1/lists/my-homelab-in-use](https://github.com/RobertGonzales1/Homelab_Ansible
+) <br>
+
+---
+
 ## 🗺️ Network Diagram
 
 ![Network Diagram](https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Network%20Diagrams/Network%20Diagram%2002-11-17.png)
