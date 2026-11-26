@@ -16,9 +16,6 @@ services:
             # Two-factor login (TOTP) with a recovery code
             SEMAPHORE_TOTP_ENABLED: "true"
             SEMAPHORE_TOTP_ALLOW_RECOVERY: "true"
-        labels:
-            # Watchtower restarting Semaphore would kill any running task
-            com.centurylinklabs.watchtower.enable: "false"
         volumes:
             - semaphore_data:/var/lib/semaphore
             - semaphore_config:/etc/semaphore

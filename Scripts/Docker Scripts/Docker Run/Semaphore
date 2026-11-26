@@ -7,6 +7,5 @@ sudo docker run -p 3000:3000 --name semaphore \
  -e SEMAPHORE_SCHEDULE_TIMEZONE=America/Los_Angeles \
  -e SEMAPHORE_TOTP_ENABLED=true \
  -e SEMAPHORE_TOTP_ALLOW_RECOVERY=true \
- --label com.centurylinklabs.watchtower.enable=false \
  --restart always \
  -d semaphoreui/semaphore:latest
