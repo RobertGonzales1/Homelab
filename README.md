@@ -96,6 +96,7 @@ Welcome To My Homelab 3.0!</br>
 | 53 | Replaced the PBS Root Password on All Proxmox Hosts With Per-Host Backup-Only API Tokens | 11/2026 |
 | 54 | Added Weekly Backup Verification on PBS and Discord Alerts for Failed Backup Jobs | 11/2026 |
 | 55 | Moved Security Issues to a Private Repo and Made the Ansible Repo Private (Read-Only Deploy Key for Semaphore) | 11/2026 |
+| 56 | Scrubbed My Public Homelab Repo: Removed Network Diagrams and Internal IPs, and Rebuilt It With Clean Git History | 11/2026 |
 
 ---
 
@@ -222,4 +223,55 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 
 ## 🗺️ Network Diagram
 
-An updated diagram is on the way. The old one was out of date and showed more of my internal network than a public page should, so I took it down.
+A high-level view of how the homelab fits together. Internal addresses and other specifics are left out on purpose. *(AI Generated)*
+
+```mermaid
+flowchart TB
+    internet((Internet))
+    cf["Cloudflare<br/>DNS · DNSSEC"]
+    gw["UniFi Gateway<br/>Zone-Based Firewall · IPS · Encrypted DNS"]
+    ts["Tailscale<br/>Remote Access"]
+    github["GitHub<br/>Scripts · Blocklists · Playbooks"]
+    discord["Discord<br/>Alerts"]
+    b2["Backblaze B2<br/>Offsite Backups"]
+
+    internet --> cf --> gw
+    internet -.-> ts
+
+    subgraph net["Segmented Network (One VLAN per Zone, Default Block All)"]
+        direction LR
+        mgmt["Management"]
+        trusted["Trusted Devices"]
+        other["Work · IoT · Voice · Guest"]
+    end
+    gw --> net
+
+    subgraph lab["Homelab Zone: Prod · Test · Dev (6× Proxmox VE Hosts)"]
+        direction TB
+        subgraph edge["Web Entry"]
+            nginx["Nginx Proxy Manager<br/>Wildcard TLS"] --> authentik["Authentik SSO<br/>Forward Auth · LDAP · OAuth2"]
+        end
+        subgraph apps["Services"]
+            docker["Ubuntu Server + Docker VMs<br/>One App per VM"]
+            windows["Windows Server 2022 VMs"]
+        end
+        subgraph core["Core Services"]
+            pihole["6× Pi-hole<br/>Two Layers of 3"]
+            semaphore["Semaphore + Ansible<br/>Patching · Audits · Hardening"]
+            pbs["Proxmox Backup Server<br/>Nightly + Weekly Verify"]
+        end
+        authentik --> apps
+        ts -.-> lab
+    end
+    gw --> nginx
+
+    subgraph store["Storage Zone"]
+        nas["2× Synology NAS<br/>Active Backup for Devices"]
+    end
+
+    nas --> b2
+    github --> semaphore
+    github --> pihole
+    semaphore --> discord
+    pbs --> discord
+```
