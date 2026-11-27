@@ -205,6 +205,7 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 | Proxmox / PBS | Proxmox_and_PBS_Pending_Updates | Weekly report of pending hypervisor/backup-server updates |
 | Proxmox / PBS | PBS_Backup_Verification | Daily check that every VM has a recent backup |
 | Proxmox / PBS | Guest_Backup_Coverage | Monthly check that every VM is in a backup job, and flags leftover backups of deleted VMs |
+| Proxmox / PBS | PBS_Backup_Alerts | Weekly verify jobs on the backup server, and Discord alerts for failed backup, verify and prune jobs |
 | Proxmox / PBS | PBS_Backup_Tokens | Each hypervisor backs up with its own backup-only API token |
 | Proxmox / PBS | PBS_SSH_Keys_Only | Key-only SSH on the hypervisors and backup server |
 | Pi-hole | Pihole_Sync_Adlists | Daily sync of each Pi-hole's blocklists from this repo, with validation and health checks |
