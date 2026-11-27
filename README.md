@@ -229,46 +229,57 @@ A high-level view of how the homelab fits together. Internal addresses and other
 flowchart TB
     internet((Internet))
     cf["Cloudflare<br/>DNS · DNSSEC"]
-    gw["UniFi Gateway<br/>Zone-Based Firewall · IPS · Encrypted DNS"]
-    ts["Tailscale<br/>Remote Access"]
-    github["GitHub<br/>Scripts · Blocklists · Playbooks"]
+    azure["Azure Static Web Apps<br/>Family & Friends Websites"]
+    github["GitHub<br/>Scripts · Blocklists · Playbooks · CI/CD"]
     discord["Discord<br/>Alerts"]
     b2["Backblaze B2<br/>Offsite Backups"]
 
-    internet --> cf --> gw
-    internet -.-> ts
+    internet --> cf
+    internet --> gw["UniFi Express 7<br/>Router · Zone-Based Firewall · IPS · Encrypted DNS"]
+    gw --> sw["UniFi Switches + U6+ Access Points"]
+    github --> azure
 
-    subgraph net["Segmented Network (One VLAN per Zone, Default Block All)"]
+    subgraph net["13 VLANs · Default Block All Between Zones"]
         direction LR
-        mgmt["Management"]
-        trusted["Trusted Devices"]
-        other["Work · IoT · Voice · Guest"]
+        trusted["Management · Trusted"]
+        isolated["Work · IoT · Guest<br/>Isolated"]
+        other["Printing · Voice · Surveillance · DMZ"]
     end
-    gw --> net
+    sw --> net
 
-    subgraph lab["Homelab Zone: Prod · Test · Dev (6× Proxmox VE Hosts)"]
+    subgraph lab["Homelab Zone: Prod · Test · Dev"]
         direction TB
+        subgraph hosts["6× Minisforum UM890 Pro · Standalone Proxmox VE Hosts"]
+            direction LR
+            winhosts["3× Windows Hosts<br/>64 GB RAM · NVMe RAID 1"]
+            linhosts["3× Linux Hosts<br/>32 GB RAM · NVMe RAID 1"]
+        end
         subgraph edge["Web Entry"]
             nginx["Nginx Proxy Manager<br/>Wildcard TLS"] --> authentik["Authentik SSO<br/>Forward Auth · LDAP · OAuth2"]
         end
-        subgraph apps["Services"]
-            docker["Ubuntu Server + Docker VMs<br/>One App per VM"]
-            windows["Windows Server 2022 VMs"]
-        end
+        windows["Windows Server 2022 + Windows 11 VMs<br/>Media · Mail Archiving · IIS · Scripts"]
+        docker["Ubuntu Server + Docker VMs<br/>One App per VM"]
         subgraph core["Core Services"]
             pihole["6× Pi-hole<br/>Two Layers of 3"]
             semaphore["Semaphore + Ansible<br/>Patching · Audits · Hardening"]
+            ts["2× Tailscale Subnet Routers<br/>Exit Node · Tailnet Lock"]
             pbs["Proxmox Backup Server<br/>Nightly + Weekly Verify"]
         end
-        authentik --> apps
-        ts -.-> lab
+        winhosts --> windows
+        linhosts --> docker
+        linhosts --> core
+        authentik --> docker
+        authentik --> windows
     end
+    sw --> hosts
     gw --> nginx
 
     subgraph store["Storage Zone"]
-        nas["2× Synology NAS<br/>Active Backup for Devices"]
+        nas["2× Synology 8-Bay NAS<br/>DS1819+ · DS1821+"]
     end
+    sw --> nas
 
+    pbs --> nas
     nas --> b2
     github --> semaphore
     github --> pihole
