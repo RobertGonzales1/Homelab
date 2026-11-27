@@ -195,17 +195,23 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 | Linux / Docker | Check_Memory_Usage, Check_Disk_Space | Hourly resource checks with alerts |
 | Linux / Docker | Container_Health_Check | Hourly check that every container is running and healthy |
 | Linux / Docker | Watchtower_Schedule | Container auto-updates in a quiet-hours window, with Discord notifications |
+| Linux / Docker | Diun_Deploy | Discord heads-up when a container has a new image, before Watchtower installs it overnight |
+| Linux / Docker | Failed_Services_Report | Weekly list of crashed or failed services on every Linux host |
 | Linux / Docker | Log_Rotation, Journal_Cleanup, Prune_Images | Weekly housekeeping |
 | Linux / Docker | Reboot_Age_Report | Flags hosts that need a reboot after updates |
 | Security | SSH_Allow_Homelab_Only | SSH only accepted from the homelab network, rolled out with an automatic undo |
 | Security | SSH_Collect_Host_Keys | Builds and checks the pinned SSH host keys Ansible trusts |
 | Security | SSH_Key_Audit | Monthly audit of SSH password/root login settings and authorized keys on every host |
 | Security | Fail2Ban_Status_Check, Fail2Ban_Set_Ignore_IPs | Fail2Ban health and a minimal, consistent ignore list |
+| Security | Trivy_Image_Scan | Weekly scan of running container images for critical/high vulnerabilities that an update fixes |
+| Security | Certificate_Expiry_Check | Daily check that no TLS certificate in use is close to expiring |
 | Proxmox / PBS | Proxmox_Host_Health, VM_Resource_Audit | Host health and VM sizing reports |
 | Proxmox / PBS | Proxmox_and_PBS_Pending_Updates | Weekly report of pending hypervisor/backup-server updates |
 | Proxmox / PBS | PBS_Backup_Verification | Daily check that every VM has a recent backup |
 | Proxmox / PBS | Guest_Backup_Coverage | Monthly check that every VM is in a backup job, and flags leftover backups of deleted VMs |
 | Proxmox / PBS | PBS_Backup_Alerts | Weekly verify jobs on the backup server, and Discord alerts for failed backup, verify and prune jobs |
+| Proxmox / PBS | Host_Config_Backup | Nightly backup of each hypervisor's own configuration to the backup server |
+| Proxmox / PBS | Restore_Test | Monthly test restore of a real VM backup (network disconnected), boot check, then cleanup |
 | Proxmox / PBS | PBS_Backup_Tokens | Each hypervisor backs up with its own backup-only API token |
 | Proxmox / PBS | PBS_SSH_Keys_Only | Key-only SSH on the hypervisors and backup server |
 | Pi-hole | Pihole_Sync_Adlists | Daily sync of each Pi-hole's blocklists from this repo, with validation and health checks |
@@ -214,6 +220,7 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 | Windows | Windows_Update, Windows_Auto_Reboot | Patching and scheduled reboots |
 | Windows | Check_Disk_Space, Check_Memory_Usage, Disk_Cleanup | Resource checks and cleanup |
 | Windows | Firewall_Check, Admin_Audit, Reboot_Age_Report | Firewall, local admin and reboot reports |
+| Windows | Defender_Check | Daily check that antivirus and real-time protection are on and definitions are current |
 
 ---
 
