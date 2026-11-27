@@ -75,8 +75,8 @@ Welcome To My Homelab 3.0!</br>
 | 32 | Migrated to Zone Based Firewall on Unifi and Re-Set Up Custom Rules and VLAN/Zone Isolation | 08/2026 |
 | 33 | Disabled Unencrypted WinRM and Basic Authentication on All Windows Server VMs | 11/2026 |
 | 34 | Restricted SSH on All Linux VMs, Proxmox Hosts and PBS to the Homelab Network Only (Rolled Out by Ansible With an Automatic Undo if Access Breaks) | 11/2026 |
-| 35 | Blocked SSH Logins Arriving Through the Tailscale Subnet Routers | 11/2026 |
-| 36 | Limited the Fail2Ban Ignore List to Localhost, Semaphore and the Jump Servers Only | 11/2026 |
+| 35 | Blocked SSH Logins Over the Remote-Access VPN | 11/2026 |
+| 36 | Cut the Fail2Ban Ignore List Down to the Few Admin Hosts That Need It | 11/2026 |
 | 37 | Updated the New-VM Setup Script to Apply the Same SSH and Fail2Ban Hardening | 11/2026 |
 | 38 | Enabled TOTP MFA on Semaphore | 11/2026 |
 | 39 | Confirmed GitHub Secret Scanning and Push Protection on My Repos; Removed My Gmail Address From Public Commit History | 11/2026 |
