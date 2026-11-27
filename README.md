@@ -197,4 +197,4 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 
 ## 🗺️ Network Diagram
 
-![Network Diagram](https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Network%20Diagrams/Network%20Diagram%2002-11-17.png)
+An updated diagram is on the way. The old one was out of date and showed more of my internal network than a public page should, so I took it down.

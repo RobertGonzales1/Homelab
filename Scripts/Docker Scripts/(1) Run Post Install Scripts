@@ -1,3 +1,10 @@
+# Set your own addresses first (they are not stored in this public repo).
+# The fail2ban, sshd and Semaphore whitelist scripts stop with an error if these are left empty.
+export SEMAPHORE_IP=""     # Ansible/Semaphore host, never banned (e.g. 192.168.1.10)
+export TRUSTED_IPS=""      # admin hosts you SSH in from, never banned (space-separated)
+export SSH_ALLOW_CIDR=""   # the only network SSH accepts logins from (e.g. 192.168.1.0/24)
+export SSH_DENY_ADDRS=""   # hosts in that network that must not log in (comma-separated), or none
+
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_docker.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_portainer.sh | bash
 curl -fsSL https://raw.githubusercontent.com/RobertGonzales1/Homelab/refs/heads/main/Scripts/Docker%20Scripts/install_fail2ban_AI_Generated.sh | bash

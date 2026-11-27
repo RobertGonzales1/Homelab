@@ -10,16 +10,21 @@ set -euo pipefail
 
 SSH_PORT="${1:-2222}"   # Match your sshd_config Port
 
-# Never ban these: localhost, Semaphore (x.x.x.x) and the SSH jump VMs
-# (x.x.x.x, backup x.x.x.x). Everything else in the homelab CAN be banned:
-# SSH only accepts logins from x.x.x.x/23, so Fail2Ban is the backstop against a
-# compromised homelab machine (e.g. the internet-facing Nginx). Tailscale is not
-# trusted and stays off this list. Override with IGNORE_IPS="..." when running.
+# Never ban these: localhost, the Ansible/Semaphore host and the admin hosts
+# you SSH in from. Everything else CAN be banned, so Fail2Ban stays a backstop
+# against a compromised machine on the same network.
+# The addresses are not stored in this public repo. Set them before running:
+#   export SEMAPHORE_IP="x.x.x.x" TRUSTED_IPS="x.x.x.x y.y.y.y"
+# or set the whole list yourself with IGNORE_IPS="...".
 # Same list as Homelab_Ansible/Playbooks/Linux_Fail2Ban_Set_Ignore_IPs.yml.
-IGNORE_IPS="${IGNORE_IPS:-127.0.0.1/8 ::1 x.x.x.x x.x.x.x x.x.x.x}"
-# On the Semaphore VM, Semaphore's container connects from a Docker address.
-if hostname -I 2>/dev/null | tr ' ' '\n' | grep -qx 'x.x.x.x'; then
-    IGNORE_IPS="$IGNORE_IPS 172.16.0.0/12"
+if [ -z "${IGNORE_IPS:-}" ]; then
+    : "${SEMAPHORE_IP:?Set SEMAPHORE_IP (the Ansible/Semaphore host) or IGNORE_IPS}"
+    : "${TRUSTED_IPS:?Set TRUSTED_IPS (space-separated admin hosts) or IGNORE_IPS}"
+    IGNORE_IPS="127.0.0.1/8 ::1 ${SEMAPHORE_IP} ${TRUSTED_IPS}"
+    # On the Semaphore host itself, Semaphore's container connects from a Docker address.
+    if hostname -I 2>/dev/null | tr ' ' '\n' | grep -qxF "${SEMAPHORE_IP}"; then
+        IGNORE_IPS="$IGNORE_IPS 172.16.0.0/12"
+    fi
 fi
 
 echo "=== Fail2Ban Installer for Homelab ==="
@@ -41,7 +46,7 @@ maxretry = 3
 banaction = iptables-multiport
 backend = systemd
 
-# Never ban localhost, Semaphore or the jump VMs (see IGNORE_IPS above)
+# Never ban localhost, Semaphore or the admin hosts (see IGNORE_IPS above)
 ignoreip = ${IGNORE_IPS}
 
 [sshd]

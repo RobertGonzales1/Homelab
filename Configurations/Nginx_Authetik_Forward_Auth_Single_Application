@@ -50,7 +50,7 @@ location / {
 # all requests to /outpost.goauthentik.io must be accessible without authentication
 location /outpost.goauthentik.io {
     # When using the embedded outpost, use:
-    proxy_pass              http://x.x.x.x:7000/outpost.goauthentik.io;
+    proxy_pass              http://<AUTHENTIK_IP>:7000/outpost.goauthentik.io;
     # For manual outpost deployments:
     # proxy_pass              http://outpost.company:9000;
 

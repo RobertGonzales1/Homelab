@@ -11,7 +11,7 @@ services:
     environment:
       - ES_URL=http://archivist-es:9200     # needs protocol e.g. http and port
       - REDIS_CON=redis://archivist-redis:6379
-      - TA_HOST=http://x.x.x.x:8123  https://SubDomain.MainDomain.Com # set your host name with protocol and port # You Can Add Multiple Domains With a Space Between Each One.
+      - TA_HOST=http://<HOST_IP>:8123  https://SubDomain.MainDomain.Com # set your host name with protocol and port # You Can Add Multiple Domains With a Space Between Each One.
       - TA_USERNAME=XXXXXXXXXX           # your initial TA credentials
       - TA_PASSWORD=XXXXXXXXXX              # your initial TA credentials
       - ELASTIC_PASSWORD=XXXXXXXXXX         # set password for Elasticsearch

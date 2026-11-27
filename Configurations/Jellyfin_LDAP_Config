@@ -1,10 +1,10 @@
 Jellyfin LDAP Config:
 
-LDAP Server: x.x.x.x
+LDAP Server: <AUTHENTIK_LDAP_OUTPOST_IP>
 LDAP Port: 636
 Secure LDAP: Checked
 StartTLS: Unchecked
-Skip SSL/TLS Verification: Checked
+Skip SSL/TLS Verification: Only if the LDAP outpost uses a self-signed certificate (a trusted certificate is better)
 Allow password change: Unchecked
 Password Reset URL: Empty
 LDAP Bind User: cn=ldapservice,ou=users,dc=ldap,dc=goauthentik,dc=io

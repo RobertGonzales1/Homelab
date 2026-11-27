@@ -8,6 +8,13 @@
 # =============================================================
 set -euo pipefail
 
+# The networks are not stored in this public repo. Set them before running:
+#   export SSH_ALLOW_CIDR="x.x.x.x/yy"       # the only network SSH accepts logins from
+#   export SSH_DENY_ADDRS="x.x.x.x,y.y.y.y"  # hosts inside it that must not log in
+#                                            # (e.g. VPN routers); "none" skips this
+: "${SSH_ALLOW_CIDR:?Set SSH_ALLOW_CIDR, e.g. export SSH_ALLOW_CIDR=192.168.1.0/24}"
+: "${SSH_DENY_ADDRS:?Set SSH_DENY_ADDRS (comma-separated) or SSH_DENY_ADDRS=none}"
+
 echo "=== SSH Hardening Script ==="
 echo ""
 echo "[!] WARNING: This disables password auth. Make sure key auth works first!"
@@ -41,7 +48,7 @@ UsePAM yes
 AuthenticationMethods publickey
 
 # --- Restrict Users (uncomment and edit) ---
-# AllowUsers robert
+# AllowUsers youruser
 # AllowGroups ssh-users
 
 # --- Key Exchange & Ciphers ---
@@ -75,18 +82,22 @@ PermitUserEnvironment no
 Compression no
 StrictModes yes
 
-# --- Homelab only: refuse logins from outside x.x.x.x/23 ---
-# ...and from the Tailscale subnet routers (tailscale01/02), so there's no SSH
-# over Tailscale. Must stay LAST: everything after a Match line applies only to
-# that match. Same block (same markers) the SSH_Allow_Homelab_Only Ansible
-# playbook manages.
-# BEGIN ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
-Match Address *,!x.x.x.x/23,!127.0.0.0/8,!::1
-    DenyUsers *
-Match Address x.x.x.x,x.x.x.x
-    DenyUsers *
-# END ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)
 SSHEOF
+
+# --- Homelab only: refuse logins from outside SSH_ALLOW_CIDR ---
+# ...and from the hosts in SSH_DENY_ADDRS. Must stay LAST: everything after a
+# Match line applies only to that match. Same block (same markers) the
+# SSH_Allow_Homelab_Only Ansible playbook manages.
+{
+    echo "# BEGIN ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)"
+    echo "Match Address *,!${SSH_ALLOW_CIDR},!127.0.0.0/8,!::1"
+    echo "    DenyUsers *"
+    if [ "${SSH_DENY_ADDRS}" != "none" ]; then
+        echo "Match Address ${SSH_DENY_ADDRS}"
+        echo "    DenyUsers *"
+    fi
+    echo "# END ANSIBLE homelab-only SSH (Homelab_Ansible/Playbooks/SSH_Allow_Homelab_Only.yml)"
+} | sudo tee -a /etc/ssh/sshd_config > /dev/null
 
 # With socket activation (Ubuntu 24.04) /run/sshd may not exist yet,
 # and sshd -t refuses to run without it.
@@ -117,7 +128,7 @@ elif systemctl is-active --quiet sshd.service; then
 fi
 
 echo ""
-echo "[✓] Done! SSH is now hardened on port 2222 and only accepts logins from x.x.x.x/23 (not over Tailscale)."
+echo "[✓] Done! SSH is now hardened on port 2222 and only accepts logins from ${SSH_ALLOW_CIDR}."
 echo ""
 echo "    ╔══════════════════════════════════════════════════╗"
 echo "    ║  DO NOT close this session yet!                  ║"
