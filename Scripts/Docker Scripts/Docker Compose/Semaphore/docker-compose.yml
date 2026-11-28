@@ -16,6 +16,8 @@ services:
             # Two-factor login (TOTP) with a recovery code
             SEMAPHORE_TOTP_ENABLED: "true"
             SEMAPHORE_TOTP_ALLOW_RECOVERY: "true"
+            # Run at most 2 jobs at once; extra jobs wait in the queue
+            SEMAPHORE_MAX_PARALLEL_TASKS: "2"
         volumes:
             - semaphore_data:/var/lib/semaphore
             - semaphore_config:/etc/semaphore
