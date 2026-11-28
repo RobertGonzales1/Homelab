@@ -94,18 +94,14 @@ Welcome To My Homelab 3.0!</br>
 | 51 | Added a Monthly Backup Coverage Check: Every VM Must Be in a Backup Job, and Leftover Backups Get Flagged (AI-Assisted) | 11/2026 |
 | 52 | Started Nightly Backups of Every Proxmox Host's Own Configuration to PBS (AI-Assisted) | 11/2026 |
 | 53 | Added a Monthly Automated Restore Test: a Real VM Backup Is Restored With No Network, Booted, and Removed (AI-Assisted) | 11/2026 |
-| 54 | Added a Weekly Report of Failed Services on All 30 Linux Hosts (AI-Assisted) | 11/2026 |
+| 54 | Added a Weekly Report of Failed Services on All Linux Hosts (AI-Assisted) | 11/2026 |
 | 55 | Added Diun New-Image Alerts on Every Docker VM, Ahead of Watchtower's Overnight Updates (AI-Assisted) | 11/2026 |
 | 56 | Added a Weekly Trivy Vulnerability Scan of Every Running Container Image (Pinned by Digest After Trivy's 2026 Supply-Chain Attack) (AI-Assisted) | 11/2026 |
-| 57 | Added a Daily Microsoft Defender Check on All 15 Windows Servers (AI-Assisted) | 11/2026 |
+| 57 | Added a Daily Microsoft Defender Check on All Windows Servers (AI-Assisted) | 11/2026 |
 | 58 | Added a Daily TLS Certificate Expiry Check for Nginx Proxy Manager, Proxmox and PBS (AI-Assisted) | 11/2026 |
 | 59 | Put Every Docker VM on Automatic Container Updates (AI-Assisted) | 11/2026 |
 | 60 | Added a Read-Only Backup Configuration Audit and Safely Removed Backups of Deleted VMs from PBS (AI-Assisted) | 11/2026 |
-| 61 | Removed an Old Expired TLS Certificate and Its Private Key from the Reverse Proxy, After Verifying Nothing Used It (AI-Assisted) | 11/2026 |
-| 62 | Turned Windows Firewall Back On for 4 Servers With Auto-Rollback, Without Breaking Any Running Service (AI-Assisted) | 11/2026 |
-| 63 | Retired 12 Finished One-Time Change Playbooks From the Automation Server, So Fewer Jobs Can Make Root-Level Changes (AI-Assisted) | 11/2026 |
-| 64 | Made Sure Alerts Still Reach Discord When Something Goes Wrong: Capped Long Output That Discord Would Reject (AI-Assisted) | 11/2026 |
-| 65 | Limited Semaphore to 2 Jobs at a Time So the Automation Server Can't Run Out of Memory (AI-Assisted) | 11/2026 |
+| 61 | Made Sure Alerts Still Reach Discord When Something Goes Wrong: Capped Long Output That Discord Would Reject (AI-Assisted) | 11/2026 |
 
 ---
 
