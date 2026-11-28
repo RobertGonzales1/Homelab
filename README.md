@@ -91,6 +91,21 @@ Welcome To My Homelab 3.0!</br>
 | 48 | Turned Off SSH Password Logins on All Proxmox Hosts and PBS (Root by SSH Key Only) (AI-Assisted) | 11/2026 |
 | 49 | Replaced the PBS Root Password on All Proxmox Hosts With Per-Host Backup-Only API Tokens (AI-Assisted) | 11/2026 |
 | 50 | Added Weekly Backup Verification on PBS and Discord Alerts for Failed Backup Jobs (AI-Assisted) | 11/2026 |
+| 51 | Added a Monthly Backup Coverage Check: Every VM Must Be in a Backup Job, and Leftover Backups Get Flagged (AI-Assisted) | 11/2026 |
+| 52 | Started Nightly Backups of Every Proxmox Host's Own Configuration to PBS (AI-Assisted) | 11/2026 |
+| 53 | Added a Monthly Automated Restore Test: a Real VM Backup Is Restored With No Network, Booted, and Removed (AI-Assisted) | 11/2026 |
+| 54 | Added a Weekly Report of Failed Services on All 30 Linux Hosts (AI-Assisted) | 11/2026 |
+| 55 | Added Diun New-Image Alerts on Every Docker VM, Ahead of Watchtower's Overnight Updates (AI-Assisted) | 11/2026 |
+| 56 | Added a Weekly Trivy Vulnerability Scan of Every Running Container Image (Pinned by Digest After Trivy's 2026 Supply-Chain Attack) (AI-Assisted) | 11/2026 |
+| 57 | Added a Daily Microsoft Defender Check on All 15 Windows Servers (AI-Assisted) | 11/2026 |
+| 58 | Added a Daily TLS Certificate Expiry Check for Nginx Proxy Manager, Proxmox and PBS (AI-Assisted) | 11/2026 |
+| 59 | Put Every Docker VM on Automatic Container Updates (AI-Assisted) | 11/2026 |
+| 60 | Added a Read-Only Backup Configuration Audit and Safely Removed Backups of Deleted VMs from PBS (AI-Assisted) | 11/2026 |
+| 61 | Removed an Old Expired TLS Certificate and Its Private Key from the Reverse Proxy, After Verifying Nothing Used It (AI-Assisted) | 11/2026 |
+| 62 | Turned Windows Firewall Back On for 4 Servers With Auto-Rollback, Without Breaking Any Running Service (AI-Assisted) | 11/2026 |
+| 63 | Retired 12 Finished One-Time Change Playbooks From the Automation Server, So Fewer Jobs Can Make Root-Level Changes (AI-Assisted) | 11/2026 |
+| 64 | Made Sure Alerts Still Reach Discord When Something Goes Wrong: Capped Long Output That Discord Would Reject (AI-Assisted) | 11/2026 |
+| 65 | Limited Semaphore to 2 Jobs at a Time So the Automation Server Can't Run Out of Memory (AI-Assisted) | 11/2026 |
 
 ---
 
@@ -199,21 +214,21 @@ All of these run on a schedule (or on demand) from Ansible Semaphore and report 
 | Linux / Docker | Failed_Services_Report | Weekly list of crashed or failed services on every Linux host |
 | Linux / Docker | Log_Rotation, Journal_Cleanup, Prune_Images | Weekly housekeeping |
 | Linux / Docker | Reboot_Age_Report | Flags hosts that need a reboot after updates |
-| Security | SSH_Allow_Homelab_Only | SSH only accepted from the homelab network, rolled out with an automatic undo |
+| Security | SSH_Allow_Homelab_Only | SSH only accepted from the homelab network, rolled out with an automatic undo *(one-time, done and retired)* |
 | Security | SSH_Collect_Host_Keys | Builds and checks the pinned SSH host keys Ansible trusts |
 | Security | SSH_Key_Audit | Monthly audit of SSH password/root login settings and authorized keys on every host |
-| Security | Fail2Ban_Status_Check, Fail2Ban_Set_Ignore_IPs | Fail2Ban health and a minimal, consistent ignore list |
+| Security | Fail2Ban_Status_Check, Fail2Ban_Set_Ignore_IPs | Fail2Ban health, and a minimal, consistent ignore list *(ignore list: one-time, done and retired)* |
 | Security | Trivy_Image_Scan | Weekly scan of running container images for critical/high vulnerabilities that an update fixes |
 | Security | Certificate_Expiry_Check | Daily check that no TLS certificate in use is close to expiring |
 | Proxmox / PBS | Proxmox_Host_Health, VM_Resource_Audit | Host health and VM sizing reports |
 | Proxmox / PBS | Proxmox_and_PBS_Pending_Updates | Weekly report of pending hypervisor/backup-server updates |
 | Proxmox / PBS | PBS_Backup_Verification | Daily check that every VM has a recent backup |
 | Proxmox / PBS | Guest_Backup_Coverage | Monthly check that every VM is in a backup job, and flags leftover backups of deleted VMs |
-| Proxmox / PBS | PBS_Backup_Alerts | Weekly verify jobs on the backup server, and Discord alerts for failed backup, verify and prune jobs |
+| Proxmox / PBS | PBS_Backup_Alerts | Weekly verify jobs on the backup server, and Discord alerts for failed backup, verify and prune jobs *(one-time, done and retired)* |
 | Proxmox / PBS | Host_Config_Backup | Nightly backup of each hypervisor's own configuration to the backup server |
 | Proxmox / PBS | Restore_Test | Monthly test restore of a real VM backup (network disconnected), boot check, then cleanup |
-| Proxmox / PBS | PBS_Backup_Tokens | Each hypervisor backs up with its own backup-only API token |
-| Proxmox / PBS | PBS_SSH_Keys_Only | Key-only SSH on the hypervisors and backup server |
+| Proxmox / PBS | PBS_Backup_Tokens | Each hypervisor backs up with its own backup-only API token *(one-time, done and retired)* |
+| Proxmox / PBS | PBS_SSH_Keys_Only | Key-only SSH on the hypervisors and backup server *(one-time, done and retired)* |
 | Pi-hole | Pihole_Sync_Adlists | Daily sync of each Pi-hole's blocklists from this repo, with validation and health checks |
 | Pi-hole | Pihole_Update | Weekly Pi-hole updates, one server at a time |
 | Pi-hole | Pihole_Refresh_Lookalike_Domains | Monthly refresh of the custom lookalike/typosquat blocklist |

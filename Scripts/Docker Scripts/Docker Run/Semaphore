@@ -7,5 +7,6 @@ sudo docker run -p 3000:3000 --name semaphore \
  -e SEMAPHORE_SCHEDULE_TIMEZONE=America/Los_Angeles \
  -e SEMAPHORE_TOTP_ENABLED=true \
  -e SEMAPHORE_TOTP_ALLOW_RECOVERY=true \
+ -e SEMAPHORE_MAX_PARALLEL_TASKS=2 \
  --restart always \
  -d semaphoreui/semaphore:latest
